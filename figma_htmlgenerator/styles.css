@@ -1,0 +1,110 @@
+.5_31 {
+	height: 100%;
+	overflow: hidden;
+}
+body {
+	background-color:rgba(34.05810445547104, 29.23320695757866, 29.23320695757866, 1);
+	height: 100%;
+	overflow: hidden;
+
+}.e104_2 {
+	width:2381.840576171875px;
+	height:2331.826904296875px;
+	position:absolute;
+	left:-554px;
+	top:-1100px;
+}.e5_33 {
+	box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+	transform: rotate(-21.999999006829288deg);
+	width:892.3042602539062px;
+	height:1008.4570922851562px;
+	position:absolute;
+	left:1176.73583984375px;
+	top:1396.8018798828125px;
+	background-image:url(images/cover_1.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+}.e8_39 {
+	box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+	transform: rotate(-22.000000590039555deg);
+	width:892.2999877929688px;
+	height:1161.766845703125px;
+	position:absolute;
+	left:742px;
+	top:334.261474609375px;
+	background-image:url(images/page1_1.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+}.e8_40 {
+	box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+	transform: rotate(-22.000000590039555deg);
+	width:892.2999877929688px;
+	height:1161.766845703125px;
+	position:absolute;
+	left:0px;
+	top:642.261474609375px;
+	background-image:url(images/page1_2.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+}.e5_32 {
+	width:100%;
+	height:134px;
+	position:absolute;
+	left:0px;
+	top:-2px;
+	background-image:url(images/header.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+}.e8_41 {
+	color:rgba(188.12060952186584, 188.12060952186584, 188.12060952186584, 1);
+	width:568px;
+	height:210px;
+	position:absolute;
+	left:123px;
+	top:639px;
+	font-family:Overpass;
+	text-align:left;
+	font-size:24px;
+	letter-spacing:0;
+}.e8_42 {
+	color:rgba(240.18310546875, 240.18310546875, 240.18310546875, 1);
+	width:569px;
+	height:132px;
+	position:absolute;
+	left:126px;
+	top:558px;
+	font-family:Overpass;
+	text-align:left;
+	font-size:52px;
+	letter-spacing:0;
+}.e104_3 {
+	width:67px;
+	height:62px;
+	position:absolute;
+	left:691px;
+	top:855px;
+}.e13_155 {
+	width:50px;
+	height:50px;
+	position:absolute;
+	left:4px;
+	top:12px;
+}.e13_156 {
+	background-color:rgba(248.0000004172325, 248.0000004172325, 248.0000004172325, 1);
+	width:20.833332061767578px;
+	height:10.416666984558105px;
+	position:absolute;
+	left:14.583333015441895px;
+	top:20.83333396911621px;
+}.e14_170 {
+	color:rgba(255, 255, 255, 1);
+	width:67px;
+	height:30px;
+	position:absolute;
+	left:0px;
+	top:0px;
+	font-family:Overpass;
+	text-align:left;
+	font-size:24px;
+	letter-spacing:0;
+}
