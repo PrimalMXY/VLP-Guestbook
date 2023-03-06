@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1558 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ff0;
+        opacity: .25;
+      }
+    </style>
+  </defs>
+  <g id="book_background_image">
+    <image id="bookImage" width="1558" height="1080" xlink:href="book.png"/>
+  </g>
+  <g id="signatures">
+    <rect id="bury" class="cls-1" x="278" y="38" width="412" height="56"/>
+    <rect id="nigel" class="cls-1" x="877" y="66" width="333" height="56"/>
+    <rect id="hepburn" class="cls-1" x="278" y="892" width="412" height="43"/>
+  </g>
+</svg>

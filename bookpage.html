@@ -1,88 +1,163 @@
 <html>
 <head>
   <style>
-  header {
-    background-color: #FFFFFF;
-    top:0px;
 
-
-}
-  #menu{
-    width:80%;
-    padding:10px;
-    margin:auto;
-  }
-   body{
-
-     background-color: #A26050;
-     margin:0;
-   }
-    #book{
-      position:absolute;
-      top:50px;
-      left:0px;
-      z-index:1;
-      width:868px;
-      height:649px;
-
+    header {
+      background-color: #FFFFFF;
+      top:0px;
     }
+    #menu{
+      width:80%;
+      padding:10px;
+      margin:auto;
+    }
+    body{
+      background-color: #A26050;
+      margin:0;
+    }
+
+
     .signature_box{
       background-color:rgba(34.05810445547104, 29.23320695757866, 29.23320695757866, 0.8500000238418579);
-	    width:200px;
-	    height:300px;
-		  border-top-left-radius:30px;
-		  border-top-right-radius:30px;
-		  border-bottom-left-radius:30px;
-		  border-bottom-right-radius:30px;
+	    width:15%;
+	    min-height: 20%;
+		  border-top-left-radius:10px;
+		  border-top-right-radius:10px;
+		  border-bottom-left-radius:10px;
+		  border-bottom-right-radius:10px;
       position:absolute;
-      z-index:2;
-      left:0px;
-      top:0px;
+      z-index:5;
       color:white;
       text-align: center;
-
+      padding: 1%;
     }
+
     .signature_info{
-      font-size: 10px;
+      font-size: 1em;
       margin: auto;
       color:rgba(255, 255, 255, 1);
-	    width:150px;
-	    
-
 	    text-align:center;
-      padding:10px;
+      padding:5%;
 	    letter-spacing:0;
     }
+
+    .signature_box img {
+      width: 60%;
+    }
+
+    .signature_box a {
+      color: #fff;
+    }
+    .relationship_box{
+      background-color:rgba(34.05810445547104, 29.23320695757866, 29.23320695757866, 0.8500000238418579);
+      width:15%;
+      min-height: 15%;
+      border-top-left-radius:10px;
+      border-top-right-radius:10px;
+      border-bottom-left-radius:10px;
+      border-bottom-right-radius:10px;
+      position:absolute;
+      z-index:5;
+      color:white;
+      text-align: center;
+      padding: 2%;
+
+
+    }
+    .relationship_info{
+      font-size: 1em;
+      margin: auto;
+      color:rgba(255, 255, 255, 1);
+      text-align:center;
+      padding:5%;
+      letter-spacing:0;
+    }
+
+
+
     #bury{
       top:20px;
     }
     #container_top{
-      width:868px;
-      height:649px;
       display:block;
       margin:auto;
       position:relative;
-      padding:30px;
-
+      padding:25px;
+    }
+    #container_top h1 {
+      font-size: 30px;
+      color:white;
+      text-align:center;
+      margin:auto;
+      align-content:center;
     }
 
     #container_bottom{
       background-color: #221D1D;
-
-      width:100%;
       margin:0;
-
     }
+
     #intro_text{
       color:white;
       width:85%;
       margin:auto;
       padding:40px;
     }
+
+    .signature_box h3 {
+      font-size: 1.5em;
+    }
+
+
     #book_pages{
       background-color: #4B4F54;
     }
 
+    #container_book {
+      position: relative;
+      width: 70%;
+      margin: auto;
+      padding-bottom:20px;
+    }
+
+    #book_background {
+      width: 100%;
+      z-index: 0;
+    }
+
+    #book_signatures {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      z-index: 4;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    #signature_hepburn {
+      left: 0px;
+      bottom: 30px;
+    }
+
+    #signature_nigel {
+      right: 0px;
+      top: 0px;
+    }
+
+    #signature_bury {
+      left: 0px;
+      top: 0px;
+    }
+    #bury_and_nigel{
+      right:10px;
+      top:0px
+    }
+    #nigel_and_bury{
+      left:-10px;
+      top:0px
+    }
 
 
 /* CSS */
@@ -96,11 +171,11 @@
   cursor: pointer;
   display: inline-block;
 
-  font-size: 10px;
+
+  font-size: 1em;
 
   line-height: normal;
 
-  height: 25px;
   margin:10px;
   outline: none;
   padding: auto;
@@ -109,13 +184,14 @@
   transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
   user-select: none;
   -webkit-user-select: none;
-  touch-action: manipulation;
-  width: 50%;
+
+  width: 90%;
   will-change: transform;
+  z-index:5;
 }
 
 .btn:disabled {
-  pointer-events: none;
+
 }
 
 .btn:hover {
@@ -158,37 +234,307 @@ li a {
       GuestBook
     </h1>
 
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#guestbook">Guestbook</a></li>
-      <li><a href="#catalogue">Catalogue</a></li>
-
-
-
-    </ul>
+    <nav id="site_navigation">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#guestbook">Guestbook</a></li>
+        <li><a href="#catalogue">Catalogue</a></li>
+      </ul>
+    </nav>
   </div>
 </header>
+
   <div id="container_top">
-    <h1 style="font-size: 30px;color:white;text-align:center;margin:auto;align-content:center;">The Guests of Villa La Pietra</h1>
+    <h1>The Guests of Villa La Pietra</h1>
+  </div>
 
-    <img id="book" src="book.png" alt="">
-    <div class="signature_box" id="bury">
+  <div id="container_book">
+    <img id="book_background" src="book.png">
+    <svg id="book_signatures" viewBox="0 0 1558 1080" style="position:absolute;">
+      <defs>
+        <style>
+          .cls-1 {
+            opacity: 0;
+          }
+          .cls-1:hover {
+            fill: #ff0;
+            opacity: .25;
+          }
+        </style>
+      </defs>
+      <g id="signatures">
+        <rect id="bury" class="cls-1" x="278" y="38" width="412" height="56"/>
+        <rect id="nigel" class="cls-1" x="877" y="66" width="333" height="56"/>
+        <rect id="hepburn" class="cls-1" x="278" y="892" width="412" height="43"/>
+      </g>
+    </svg>
+
+    <svg class="hidden" id="bury_relationships" viewBox="0 0 1558 1080" style="position:absolute;left:0px;">
+      <defs>
+        <style>
+          .cls-2 {
+            opacity: 0.25;
+          }
+          .cls-2:hover {
+            fill: pink;
+            opacity: 0.5;
+          }
+        </style>
+      </defs>
+      <g id="bury_relationship">
+        <rect id="bury_and_nigel_signature" class="cls-2" x="877" y="66" width="333" height="56"/>
+        <rect id="bury_and_hepburn_signature" class="cls-2" x="278" y="892" width="412" height="43"/>
+      </g>
+    </svg>
+    <svg class="hidden" id="nigel_relationships" viewBox="0 0 1558 1080" style="position:absolute;left:0px;">
+      <defs>
+        <style>
+          .cls-2 {
+            opacity: 0.25;
+          }
+          .cls-2:hover {
+            fill: pink;
+            opacity: 0.5;
+          }
+        </style>
+      </defs>
+      <g id="nigel_relationship">
+        <rect id="nigel_and_bury_signature" class="cls-2" x="278" y="38" width="412" height="56"/>
+
+      </g>
+    </svg>
+    <svg class="hidden" id="hepburn_relationships" viewBox="0 0 1558 1080" style="position:absolute;left:0px;">
+      <defs>
+        <style>
+          .cls-2 {
+            opacity: 0.25;
+          }
+          .cls-2:hover {
+            fill: pink;
+            opacity: 0.5;
+          }
+        </style>
+      </defs>
+      <g id="hepburn_relationship">
+
+
+      </g>
+    </svg>
+
+
+
+    <div class="signature_box" id="signature_bury">
       <h3>Bury</h3>
-      <div><img src="portraits/bury.png" alt="bury" style="width:90px;"></div>
+      <img src="arrow.png" style="position:absolute; left:100%; top:8%; width:10%; ">
+      <img src="portraits/bury.png" alt="bury">
       <div class="signature_info">
-     Nationality: British
-    Social Identity:
-     9th Earl of Albemarle
-   </div>
-    <div><a href="" style="color:white;margin:5px;font-size:10px;">More info...</a></div>
+        Nationality: British<br />
+        Social Identity:
+        9th Earl of Albemarle
+      </div>
+      <a href="google.com">More info...</a>
+      <button class="btn" id="showRelation_bury" data-showing="false">Show Relationship</button>
+    </div>
 
-     <button class="btn" id="show_relationship">Show Relationship</button>
+    <div class="signature_box" id="signature_nigel">
+      <h3>Nigel</h3>
+      <img src="arrow.png" style="position:absolute; left:-10%; top:12%; width:10%;  transform: scaleX(-1);">
+      <img src="portraits/bury.png" alt="bury">
+      <div class="signature_info">
+      Nationality: British
+      Social Identity:
+      9th Earl of Albemarle
+      </div>
+      <div><a href="" style="color:white;margin:5px;font-size:10px;">More info...</a></div>
+      <button class="btn" id="showRelation_nigel" data-showing="false">Show Relationship</button>
+    </div>
 
+    <div class="signature_box" id="signature_hepburn">
+      <h3>Hepburn</h3>
+      <img src="arrow.png" style="position:absolute; left:100%; top:70%; width:10%; ">
+      <img src="portraits/bury.png" alt="bury">
+      <div class="signature_info">
+      Nationality: British
+      Social Identity:
+      9th Earl of Albemarle
+      </div>
+      <div><a href="" style="color:white;margin:5px;font-size:10px;">More info...</a></div>
+      <button class="btn" id="showRelation_hepburn" data-showing="false">Show Relationship</button>
+    </div>
+    <div class="relationship_box" id="bury_and_nigel">
+    <img src="arrow.png" style="position:absolute; left:-10%; top:12%; width:10%;  transform: scaleX(-1);">
+
+    <h3 style="padding:1%;margin:5%">Bury & Nigel</h3>
+    <div class="relationship_info">
+    They are friends.
+    </div>
+    <div><a href="/bury.com" style="color:white;margin:5px;font-size:12px;">More info...</a></div>
 
     </div>
 
+    <div class="relationship_box" id="nigel_and_bury">
+    <img src="arrow.png" style="position:absolute; right:-10%; top:12%; width:10%; ">
+
+    <h3 style="padding:1%;margin:5%">Bury & Nigel</h3>
+    <div class="relationship_info">
+    They are friends.
+    </div>
+    <div><a href="/bury.com" style="color:white;margin:5px;font-size:12px;">More info...</a></div>
+
+    </div>
 
   </div>
+
+  <script>
+    // get a ref to all signature links in the SVG
+    let allSignatureLinks = document.querySelectorAll('#signatures rect');
+    let showingRelationship = false;
+
+
+    // hide all signature panels
+    hideAllSignaturePanels();
+
+    // move signature panels into their correct positions
+    for (let i = 0; i < allSignatureLinks.length; i++) {
+      //console.log(allSignatureLinks[i].id);
+
+      const myPanelID = 'signature_' + allSignatureLinks[i].id;
+      const myPanel = document.querySelector('#' + myPanelID);
+      allSignatureLinks[i].onclick = function(e) {
+        //if not showing relationship of other ppl
+
+
+        //console.log(isOn)
+
+
+          //only clickable and show profile when not showing relationship
+          if (showingRelationship == false) {
+          // hide all other signature panels
+          if (myPanel.classList.contains('hidden')) {
+            hideAllSignaturePanels();
+            hideAllRelationshipPanels();
+            myPanel.classList.remove('hidden');
+          } else {
+            console.log("not hidden!")
+            myPanel.classList.add('hidden');
+          }
+
+          console.log(e);
+          console.log(myPanel);
+
+
+
+        }else{}
+
+
+      }
+
+    }
+
+    function hideAllSignaturePanels() {
+      // also get a ref to all signature panels that need to be toggled
+      let allSignaturePanels = document.querySelectorAll('.signature_box');
+      for (let i = 0; i < allSignaturePanels.length; i++) {
+        allSignaturePanels[i].classList.add('hidden');
+      }
+    }
+    function hideAllRelationshipPanels() {
+      // also get a ref to all signature panels that need to be toggled
+      let allRelationshipPanels = document.querySelectorAll('.relationship_box');
+      for (let i = 0; i < allRelationshipPanels.length; i++) {
+        allRelationshipPanels[i].classList.add('hidden');
+      }
+    }
+
+
+
+
+
+    // hide all signature panels
+    hideAllRelationshipPanels();
+    //relationship button!!
+    let showRelationButton = document.querySelectorAll('.btn');
+    // move signature panels into their correct positions
+    for (let i = 0; i < showRelationButton.length; i++) {
+
+      console.log(showRelationButton[i].id);
+      const myButtonID = showRelationButton[i].id;
+      const myButton = document.querySelector('#' + myButtonID);
+
+      showRelationButton[i].onclick = function(e) {
+        let relationship_svg=document.querySelector("#"+myButtonID.substring(13)+"_relationships")
+        isOn = showRelationButton[i].getAttribute('data-showing');
+        if (isOn === "true") {
+          showingRelationship=false;
+          showRelationButton[i].innerText = "Show Relationship";
+          showRelationButton[i].setAttribute('data-showing', 'false');
+          hideAllRelationshipPanels();
+          relationship_svg.classList.add('hidden');
+
+        } else if (isOn === "false") {
+          showingRelationship=true;
+          showRelationButton[i].innerText = "Hide Relationship";
+          showRelationButton[i].setAttribute('data-showing', 'true');
+          console.log("showing relationship!")
+          console.log(myButtonID)
+          hideAllRelationshipPanels();
+          //show all possible relationships on svg
+          relationship_svg.classList.remove('hidden');
+          //console.log(e);
+
+
+          let allRelationshipLinks = document.querySelectorAll('#bury_relationship rect');
+          for (let i = 0; i < allRelationshipLinks.length; i++) {
+            //console.log(allSignatureLinks[i].id);
+            const myPanelID =  allRelationshipLinks[i].id;
+            console.log(myPanelID);
+            let temp =myPanelID.split('_signature')[0];
+            console.log(temp)
+            allRelationshipLinks[i].onclick = function(e) {
+              let allRelationshipPanels= document.querySelectorAll('.relationship_box');
+              for (let i = 0; i < allRelationshipPanels.length; i++) {
+                if(allRelationshipPanels[i].id===myPanelID.split('_signature')[0]){
+                  allRelationshipPanels[i].classList.remove('hidden');
+                }
+              }
+            }
+
+          }
+
+
+
+
+          //TODO:let them show after user click
+          let allRelationshipPanels= document.querySelectorAll('.relationship_box');
+          for (let i = 0; i < allRelationshipPanels.length; i++) {
+
+           console.log(allRelationshipPanels[i].id)
+           console.log(myButtonID.substring(13))
+           let arr = allRelationshipPanels[i].id.split("_and_");
+           let name1 = arr[0];
+
+           if (myButtonID.substring(13)===(name1)) {
+             console.log("The string contains 'bury'");
+             console.log(allRelationshipPanels[i].classList)
+             allRelationshipPanels[i].classList.remove('hidden');
+           } else {
+             //allRelationshipPanels[i]classList.add('hidden');
+           }
+
+
+          }
+        }
+         // hide all other relationship panels
+
+         //myButton.classList.remove('hidden');
+      }
+
+    }
+
+
+  </script>
+
+
 
 
 
@@ -201,6 +547,8 @@ The elite of American and European capitalism frequently attended events at Vill
 </div>
 <div id="book_pages">Other pages</div>
   </div>
+
+
 
 
 </body>
