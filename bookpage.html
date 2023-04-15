@@ -136,6 +136,11 @@
     .hidden {
       display: none;
     }
+
+    a:focus {
+      background-color: yellow;
+    }
+
     #signature_hand {
       left: -18%;
       bottom: 15%;
@@ -178,6 +183,24 @@
       top: 10%;
     }
 
+    #signature_owen {
+      right: -18%;
+      top: 10%;
+    }
+
+    #signature_mitchell {
+      right: -18%;
+      top: 10%;
+    }
+    #signature_hmitchell {
+      right: -18%;
+      top: -5%;
+    }
+
+    #signature_mckean {
+      right: -18%;
+      top: 0%;
+    }
 
     #signature_bury {
       left: -18%;
@@ -260,6 +283,11 @@ li a {
     padding: 14px 16px;
     text-decoration: none;
 }
+
+button:focus {
+  outline: 2px solid blue;
+}
+
   </style>
 
 </head>
@@ -273,9 +301,9 @@ li a {
 
     <nav id="site_navigation">
       <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#guestbook">Guestbook</a></li>
-        <li><a href="#catalogue">Catalogue</a></li>
+        <li><a href="#about" tabindex="3">About</a></li>
+        <li><a href="#guestbook" tabindex="2">Guestbook</a></li>
+        <li><a href="#catalogue" tabindex="1">Catalogue</a></li>
       </ul>
     </nav>
   </div>
@@ -291,7 +319,7 @@ li a {
       <defs>
         <style>
           .cls-1 {
-            opacity: 0;
+            opacity: 0.1;
           }
           .cls-1:hover {
             fill: #ff0;
@@ -300,20 +328,111 @@ li a {
         </style>
       </defs>
       <g id="signatures">
-      <rect id="woodward" class="cls-1" x="278" y="655" width="412" height="38"/>
-      <rect id="foxell" class="cls-1" x="877" y="66" width="363" height="56"/>
-      <rect id="hepburn" class="cls-1" x="278" y="892" width="412" height="43"/>
-      <rect id="hand" class="cls-1" x="278" y="283" width="412" height="36"/>
-      <rect id="dewald" class="cls-1" x="278" y="716" width="412" height="28"/>
-      <rect id="loos" class="cls-1" x="278" y="864" width="412" height="28"/>
-      <rect id="sefton" class="cls-1" x="278" y="970" width="412" height="31"/>
-      <rect id="hughes" class="cls-1" x="278" y="1001" width="412" height="31"/>
-      <rect id="honour" class="cls-1" x="877" y="486" width="363" height="29"/>
-      <rect id="fleming" class="cls-1" x="877" y="515" width="363" height="29"/>
-      <rect id="mostyn-owen" class="cls-1" x="877" y="544" width="363" height="29"/>
-      <rect id="mitchell" class="cls-1" x="877" y="573" width="363" height="29"/>
-      <rect id="h.mitchell" class="cls-1" x="877" y="602" width="363" height="22"/>
-      <rect id="mckean" class="cls-1" x="877" y="913" width="363" height="22"/>
+        <!-- top of page 1 -->
+        <a id="hand" href="#" tabindex="4"
+           aria-label="Click here to access signature information about Leonard Hand"
+           aria-controls="signature_hand"
+           aria-expanded="false">
+          <rect id="hand" class="cls-1" x="278" y="283" width="412" height="36"/>
+        </a>
+
+        <a id="woodward" href="#" tabindex="5"
+           aria-label="Click here to access signature information about Elsie C. Woodward"
+           aria-controls="signature_woodward"
+           aria-expanded="false">
+          <rect class="cls-1" x="278" y="655" width="412" height="38"/>
+        </a>
+
+        <a id="dewald" href="#" tabindex="6"
+           aria-label="Click here to access signature information about Ernest T. DeWald"
+           aria-controls="signature_dewald"
+           aria-expanded="false">
+          <rect id="dewald" class="cls-1" x="278" y="716" width="412" height="28"/>
+        </a>
+
+        <a id="loos" href="#" tabindex="7"
+           aria-label="Click here to access signature information about Anita Loos"
+           aria-controls="signature_loos"
+           aria-expanded="false">
+          <rect id="loos" class="cls-1" x="278" y="864" width="412" height="28"/>
+        </a>
+
+        <a id="hepburn" href="#" tabindex="8"
+           aria-label="Click here to access signature information about Audrey Hepburn"
+           aria-controls="signature_hepburn"
+           aria-expanded="false">
+          <rect class="cls-1" x="278" y="892" width="412" height="43"/>
+        </a>
+
+        <a id="sefton" href="#" tabindex="9"
+           aria-label="Click here to access signature information about Josephine Sefton"
+           aria-controls="signature_sefton"
+           aria-expanded="false">
+          <rect class="cls-1" x="278" y="970" width="412" height="31"/>
+        </a>
+
+        <a id="hughes" href="#" tabindex="10"
+           aria-label="Click here to access signature information about Howard Hughes"
+           aria-controls="signature_hughes"
+           aria-expanded="false">
+          <rect class="cls-1" x="278" y="1001" width="412" height="31"/>
+        </a>
+
+
+
+        <!-- top of page 2 -->
+        <a id="foxell" href="#" tabindex="11"
+           aria-label="Click here to access signature information about Nigel Foxell"
+           aria-controls="signature_foxell"
+           aria-expanded="false">
+          <rect class="cls-1" x="877" y="66" width="363" height="56"/>
+        </a>
+
+
+        <a id="honour" href="#" tabindex="12"
+           aria-label="Click here to access signature information about Hugh Honour"
+           aria-controls="signature_honour"
+           aria-expanded="false">
+          <rect class="cls-1" x="877" y="486" width="363" height="29"/>
+        </a>
+
+        <a id="fleming" href="#" tabindex="13"
+          aria-label="Click here to access signature information about John Fleming"
+          aria-controls="signature_fleming"
+          aria-expanded="false">
+          <rect class="cls-1" x="877" y="515" width="363" height="29"/>
+        </a>
+
+        <a id="owen" href="#" tabindex="14"
+          aria-label="Click here to access signature information about William Mostyn-Owen"
+
+          aria-controls="signature_owen"
+          aria-expanded="false">
+          <rect class="cls-1" x="877" y="544" width="363" height="29"/>
+        </a>
+
+        <a id="mitchell" href="#" tabindex="15"
+          aria-label="Click here to access signature information about Anne Wood Mitchell"
+          aria-controls="signature_mitchell"
+          aria-expanded="false">
+          <rect class="cls-1" x="877" y="573" width="363" height="29"/>
+        </a>
+
+        <a id="hmitchell" href="#" tabindex="16"
+          aria-label="Click here to access signature information about William H. Mitchell"
+          aria-controls="signature_hmitchell"
+          aria-expanded="false">
+          <rect class="cls-1" x="877" y="602" width="363" height="22"/>
+        </a>
+
+        <a id="mckean" href="#" tabindex="17"
+          aria-label="Click here to access signature information about Margarett Sargent McKean"
+          aria-controls="signature_mckean"
+          aria-expanded="false">
+          <rect class="cls-1" x="877" y="913" width="363" height="22"/>
+        </a>
+
+
       </g>
     </svg>
 
@@ -331,7 +450,7 @@ li a {
       </defs>
       <g id="alltags">
         <rect id="foxell_fromuk_ArtIndustry" class="cls-2 hidden" x="877" y="66" width="333" height="56"/>
-      
+
         <rect id="woodward_fromus_Philanthropy_Business" class="cls-2 hidden" x="278" y="655" width="412" height="38"/>
         <rect id="hand_fromus_Politics_HusbandofFrancesA.Hand" class="cls-2 hidden" x="278" y="283" width="412" height="36"/>
         <rect id="dewald_fromus_Art_Museums" class="cls-2 hidden" x="278" y="716" width="412" height="28"/>
@@ -347,8 +466,6 @@ li a {
         <rect id="mckean_fromus_mothertoHenryPrattMcKean II " class="cls-2 hidden" x="877" y="913" width="363" height="22"/>
       </g>
     </svg>
-
-
 
 
     <div class="signature_box" id="signature_hand">
@@ -485,7 +602,7 @@ li a {
       <div style="margin:10px;"><p style="font-size: 0.75em;">Click the buttons to see people who share similar profession with Foxell:</p>
       <button class="btn" id="showRelation_foxell_fromuk" data-showing="false">From United Kingdom</button>
       <button class="btn" id="showRelation_foxell_Art" data-showing="false">Art</button>
-      <button class="btn" id="showRelation_foxell_Architecture " data-showing="false">Architecture </button>
+      <button class="btn" id="showRelation_foxell_Architecture" data-showing="false">Architecture </button>
 
       </div>
     </div>
@@ -509,8 +626,85 @@ li a {
 
       </div>
     </div>
+    <div class="signature_box" id="signature_fleming">
+      <h3>John Fleming</h3>
+        <div style='margin:10px;font-size: 0.9em;'>United Kingdom, 1919-2001
+        </div>
+      <img src="arrow.png" style="position:absolute; left:-7.9%; top:55%; width:8%;  transform: scaleX(-1);">
 
+      <div class="signature_info">
+        John Fleming, a solicitor and amateaur art historian, joined his partner, Hugh Honour, on a trip to Villa La Pietra. They were accompanied by William Mostyn-Owen, whom they had come to know at Bernard Berenson's neighboring villa, I Tatti. Apparently Fleming dreams about writing on art and architecture; there is no better place to start than at Villa La Pietra!
+  </div>
+      <div style="margin:10px;"><p style="font-size: 0.75em;">Click the buttons to see people who share similar profession with Fleming:</p>
+      <button class="btn" id="showRelation_fleming_fromuk" data-showing="false">From United Kingdom</button>
+      <button class="btn" id="showRelation_fleming_Art" data-showing="false">Art</button>
+      <button class="btn" id="showRelation_fleming_Architecture" data-showing="false">Architecture </button>
+      <button class="btn" id="showRelation_fleming_Writing" data-showing="false">Writing </button>
+      <button class="btn" id="showRelation_fleming_honourANDfleming" data-showing="false">Relationship with Hugh Honour </button>
 
+      </div>
+    </div>
+    <div class="signature_box" id="signature_owen">
+      <h3>William Mostyn-Owen</h3>
+        <div style='margin:10px;font-size: 0.9em;'>United Kingdom, 1929-2011
+        </div>
+      <img src="arrow.png" style="position:absolute; left:-7.9%; top:60%; width:8%;  transform: scaleX(-1);">
+
+      <div class="signature_info">
+        William Mostyn-Owen recently went to see his friends, the Actons, at Villa La Pietra. Apparently, he is quite the frequent visitor, as he lives close by at Villa I Tatti. It seems Mr. Mostyn-Owen, the art historian and former Metropolitan Museum of Art employee, is busy working alongside his colleague, Bernard Berenson, on something exciting!
+    </div>
+      <div style="margin:10px;"><p style="font-size: 0.75em;">Click the buttons to see people who share similar profession with Mostyn-Owen:</p>
+      <button class="btn" id="showRelation_owen_fromuk" data-showing="false">From United Kingdom</button>
+      <button class="btn" id="showRelation_owen_Art" data-showing="false">Art</button>
+      <button class="btn" id="showRelation_owen_Museums" data-showing="false">Museums </button>
+      <button class="btn" id="showRelation_owen_Writing" data-showing="false">Writing </button>
+      </div>
+    </div>
+    <div class="signature_box" id="signature_mitchell">
+      <h3>Anne Wood Mitchell</h3>
+        <div style='margin:10px;font-size: 0.9em;'>United States, 1909-1990
+        </div>
+      <img src="arrow.png" style="position:absolute; left:-7.9%; top:60%; width:8%;  transform: scaleX(-1);">
+
+      <div class="signature_info">
+        Anne Wood Mitchell joined her distinguished husband on a visit to his cousin, Hortense Acton, in Florence. No stranger to rubbing elbows with the elite, this socialite comes from a prominent family - she is the daughter of the former president and chairman of Sears Roebuck and Company. Business-savvy in her own right, she currently serves as board president for the Children's Memorial Hospital of Chicago.
+  </div>
+      <div style="margin:10px;"><p style="font-size: 0.75em;">Click the buttons to see people who share similar profession with Mitchell:</p>
+      <button class="btn" id="showRelation_mitchell_fromus" data-showing="false">From United States</button>
+      <button class="btn" id="showRelation_mitchell_Business" data-showing="false">Business</button>
+      <button class="btn" id="showRelation_mitchell_Writing" data-showing="false">Writing </button>
+      <button class="btn" id="showRelation_mitchell_FamilyMichell" data-showing="false">Family tie to William H. Mitchell </button>
+      </div>
+    </div>
+    <div class="signature_box" id="signature_hmitchell">
+      <h3>William H. Mitchell</h3>
+      <div style='margin:10px;font-size: 0.9em;'>United States, 1895-1987</div>
+      <img src="arrow.png" style="position:absolute; left:-7.9%; top:55%; width:8%;  transform: scaleX(-1);">
+      <img src="portraits/hmitchell.jpg" alt="The 1918 passport photo of a young William Mitchell. He stares ahead with his hair slicked back.">
+      <div class="signature_info">
+    There is word that William Hamilton Mitchell, the cousin of Villa owner Hortense Acton, has just arrived for a visit. Mitchell is a wealthy investment banker living in Chicago with his beautiful wife Anne. But the juicy story follows his first wife Ginevra King-Mitchell, whose teenage romance with F. Scott Fitzgerald and later marriage to Mitchell are rumored to have inspired the characters Daisy and Tom Buchanan in legendary novel, The Great Gatsby.
+    </div>
+      <div style="margin:10px;"><p style="font-size: 0.75em;">Click the buttons to see people who share similar profession with H.Mitchell:</p>
+      <button class="btn" id="showRelation_hmitchell_fromus" data-showing="false">From United States</button>
+      <button class="btn" id="showRelation_hmitchell_Business" data-showing="false">Business</button>
+      <button class="btn" id="showRelation_hmitchell_Writing" data-showing="false">Writing</button>
+      <button class="btn" id="showRelation_hmitchell_FamilyMichell" data-showing="false">Family tie to visitor Anne Wood Mitchell</button>
+      </div>
+    </div>
+    <div class="signature_box" id="signature_mckean">
+      <h3>Margarett Sargent McKean</h3>
+      <div style='margin:10px;font-size: 0.9em;'>United States, 1892-1978</div>
+      <img src="arrow.png" style="position:absolute; left:-7.9%; top:85%; width:8%;  transform: scaleX(-1);">
+      <img src="portraits/mckean.jpg" alt="Photographic portrait of Margarett Sargent McKean in 1915. Her dark hair is pulled back and she looks to the camera.">
+      <div class="signature_info">
+        Artist Margarett Sargent McKean returns to Florence accompanied by her son Henry Pratt McKean II. The cousin of portrait painter John Singer Sargent, she studied sculpture in Italy before becoming a painter herself. There are whispers that she's engaged in extramarital affairs with both men and women, how scandalous!
+</div>
+      <div style="margin:10px;"><p style="font-size: 0.75em;">Click the buttons to see people who share similar profession with McKean:</p>
+      <button class="btn" id="showRelation_mckean_fromus" data-showing="false">From United States</button>
+      <button class="btn" id="showRelation_mckean_Art" data-showing="false">Art</button>
+      <button class="btn" id="showRelation_mckean_MotherHenry" data-showing="false">mother to Henry Pratt McKean II</button>
+      </div>
+    </div>
 
 
 
@@ -520,54 +714,155 @@ li a {
   </div>
 
   <script>
+
     // get a ref to all signature links in the SVG
-    let allSignatureLinks = document.querySelectorAll('#signatures rect');
+    // CK: changed to grab 'a' tags instead of rectangles
+    let allSignatureLinks = document.querySelectorAll('#signatures a');
     let showingRelationship = false;
 
 
     // hide all signature panels
     hideAllSignaturePanels();
 
-    // move signature panels into their correct positions
+    // handle clicking on signature links, and tab order integrity
     for (let i = 0; i < allSignatureLinks.length; i++) {
-      //console.log(allSignatureLinks[i].id);
 
+      // identify our associated panel
       const myPanelID = 'signature_' + allSignatureLinks[i].id;
       const myPanel = document.querySelector('#' + myPanelID);
-      console.log(myPanel)
+
+      // when the link is clicked
       allSignatureLinks[i].onclick = function(e) {
-        //if not showing relationship of other ppl
+        // prevent any default browser behavior
+        e.preventDefault();
+        console.log("sig clicked");
 
+        // hide all relation panels when clicking to another person
+        hideAllRelationshipHighlights();
 
-        //console.log(isOn)
+        // if this link has not been clicked
+        if (myPanel.classList.contains('hidden')) {
+          // hide all other signature and relationahip panels
+          hideAllSignaturePanels();
+          hideAllRelationshipPanels();
+          showingRelationshipList = []
 
+          // show this panel
+          myPanel.classList.remove('hidden');
 
-          //only clickable and show profile when not showing relationship
-          //update: no need to do the only clickable function
-          //hide all relation panels when click another person
-          hideAllRelationshipHighlights();
+          // handle accessibility changes to indicate that this link has been clicked
+          e.currentTarget.setAttribute('aria-expanded', 'true');
 
-          // hide all other signature panels
-          if (myPanel.classList.contains('hidden')) {
-            hideAllSignaturePanels();
-            hideAllRelationshipPanels();
-            myPanel.classList.remove('hidden');
-          } else {
-            console.log("not hidden!")
-            myPanel.classList.add('hidden');
-          }
+          // move browser focus into the associated panel, allowing for keyboard
+          // navigation between elements
+          myPanel.querySelector('button').focus(); // focus on the first button inside the panel
+        }
 
-          console.log(e);
-          console.log(myPanel);
+        // this link has been clicked already, deactivate it
+        else {
 
+          // hide this panel
+          myPanel.classList.add('hidden');
 
-
-
-
+          // handle accessibility changes to indicate that this link has not been
+          e.currentTarget.setAttribute('aria-expanded', 'false');
+        }
 
       }
 
-    }
+
+
+      // handle keyboard navigation of panel buttons
+      const panelButtons = myPanel.querySelectorAll('button');
+
+      for (let j = 0; j < panelButtons.length; j++) {
+
+        // FIRST BUTTON
+        if (j == 0) {
+
+          // SHIFT-TAB: return them to the SVG link
+          panelButtons[j].addEventListener('keydown', function(e) {
+
+            if (e.shiftKey && (e.code === 'Tab' || e.keyCode === 9)) {
+              e.preventDefault();
+
+              // transition focus back to the PREVIOUS button
+              allSignatureLinks[i].focus();
+            }
+
+          });
+
+        }
+
+        // MIDDLE BUTTONS (reserve for later implementation, if necessary)
+
+        // LAST BUTTON
+        else if (j == panelButtons.length-1) {
+
+          // TAB: return them to the NEXT tab item in the SVG
+          // SHIFT-TAB: return them to the previous button
+          panelButtons[j].addEventListener('keydown', function(e) {
+
+            if (e.shiftKey && (e.code === 'Tab' || e.keyCode === 9)) {
+              e.preventDefault();
+
+              // transition focus back to the PREVIOUS button
+              panelButtons[j-1].focus();
+            }
+
+            // a TAB has been detected on this element
+            else if (e.key === 'Tab' || e.keyCode === 9) {
+              e.preventDefault();
+
+              // transition focus back to the NEXT link in the SVG
+              if (i < allSignatureLinks.length-1) {
+                allSignatureLinks[i+1].focus();
+              }
+              else {
+                allSignatureLinks[0].focus();
+              }
+            }
+          });
+
+        }
+
+      } // end loop to iterate over panel buttons
+
+
+      // handle tab navigation on the link itself
+      allSignatureLinks[i].addEventListener('keydown', function(e) {
+
+        // get a ref to the previous button's panel
+        if (i > 0) {
+
+          const prevPanel = document.querySelector('#signature_' + allSignatureLinks[i-1].id);
+
+          // SHIFT-TAB is pressed, and the previous panel is currently open
+          if ( e.shiftKey && (e.code === 'Tab' || e.keyCode === 9) && prevPanel.classList.contains('hidden') === false) {
+
+            e.preventDefault();
+            const temp = prevPanel.querySelectorAll('button');
+            console.log(temp);
+            temp[ temp.length - 1 ].focus(); // focus on the LAST button inside the panel
+
+            return;
+          }
+
+        }
+
+
+        // TAB is pressed, and the panel is currently open
+        if ( e.shiftKey === false && (e.code === 'Tab' || e.keyCode === 9) && myPanel.classList.contains('hidden') === false) {
+          e.preventDefault();
+          myPanel.querySelector('button').focus(); // focus on the first button inside the panel
+        }
+
+
+      });
+
+
+    } // end loop to set up signature link clicks
+
 
     function hideAllSignaturePanels() {
 
@@ -611,6 +906,7 @@ li a {
 
     // hide all signature panels
     hideAllRelationshipPanels();
+    showingRelationshipList = []
     //relationship button!!
     let showRelationButton = document.querySelectorAll('.btn');
     // move signature panels into their correct positions
@@ -620,91 +916,99 @@ li a {
       const myButtonID = showRelationButton[i].id;
       const myButton = document.querySelector('#' + myButtonID);
 
+
+
       showRelationButton[i].onclick = function(e) {
-        console.log(showRelationButton[i].id)
+        hideAllRelationshipPanels();
+        //console.log(showRelationButton[i].id)
         let type_of_relation = showRelationButton[i].id.split("_").pop()
-        console.log(type_of_relation)
-        // example of relationship svg naming: hepburn_fromuk_entertainment_philanthropy
-        let relationship_svg=document.querySelectorAll('rect[id*="' + type_of_relation + '"]')
-        console.log(relationship_svg)
-        //test
-
-        //test
-        isOn = showRelationButton[i].getAttribute('data-showing');
-        if (isOn === "true") {
-          showingRelationship=false;
-          showRelationButton[i].style.backgroundColor = 'transparent';
-          showRelationButton[i].style.color  = 'white';
-          //showRelationButton[i].innerText = "show profession";
-          showRelationButton[i].setAttribute('data-showing', 'false');
-          hideAllRelationshipPanels();
-
-          //TODO:dont hid all the elements, if other are still there?
-          //or check across the elements again that if any has data-showing=true, remove their hidden class again?
-          relationship_svg.forEach(element => {
-            element.classList.add('hidden');})
-
-        } else if (isOn === "false") {
+        //console.log(type_of_relation)
+        //show new relationships
+        if (!showingRelationshipList.includes(type_of_relation)) {
+          showingRelationshipList.push(type_of_relation);
+          console.log(` ${showingRelationshipList}`);
           showingRelationship=true;
           showRelationButton[i].style.backgroundColor = 'white';
           showRelationButton[i].style.color  = '#221D1D';
 
           showRelationButton[i].setAttribute('data-showing', 'true');
-          console.log("showing relationship!")
-          console.log(myButtonID)
-          hideAllRelationshipPanels();
-          // do not remove all of the element, do not show if they share the same name, e.g. hupburn does not show herself
-          relationship_svg.forEach(element => {
-            if(element.id.split("_")[0]!=(myButtonID.split("_")[1])){
-            element.classList.remove('hidden');}})
-          //console.log(e);
+    }else{
+      const index = showingRelationshipList.indexOf(type_of_relation);
+      if (index !== -1) {
+      showingRelationshipList.splice(index, 1);
+      console.log(` ${showingRelationshipList}`);
+      showingRelationship=false;
+      showRelationButton[i].style.backgroundColor = 'transparent';
+      showRelationButton[i].style.color  = 'white';
+      //showRelationButton[i].innerText = "show profession";
+      showRelationButton[i].setAttribute('data-showing', 'false');
+
+  }
 
 
-          let allRelationshipLinks = document.querySelectorAll('#alltags rect');
-          for (let i = 0; i < allRelationshipLinks.length; i++) {
-            //console.log(allSignatureLinks[i].id);
-            const myPanelID =  allRelationshipLinks[i].id;
-            //console.log(myPanelID);
-            let temp =myPanelID.split('_')[0];
 
-            allRelationshipLinks[i].onclick = function(e) {
-              let allRelationshipPanels= document.querySelectorAll('.relationship_box');
-              for (let i = 0; i < allRelationshipPanels.length; i++) {
-                if(allRelationshipPanels[i].id===myPanelID.split('_signature')[0]){
-                  console.log(allRelationshipPanels[i].id)
-                  allRelationshipPanels[i].classList.remove('hidden');
+    }
+
+              //only remove hidden class if the tag is in showingRelationshipList
+              for (let i = 0; i < showingRelationshipList.length; i++) {
+                let relationship_svg=document.querySelectorAll('rect[id*="' + showingRelationshipList[i] + '"]')
+                console.log(relationship_svg)
+
+
+                console.log("showing relationship!")
+                console.log(myButtonID)
+                //hideAllRelationshipPanels();
+                // do not remove all of the element, do not show if they share the same name, e.g. hupburn does not show herself
+                relationship_svg.forEach(element => {
+                  if(element.id.split("_")[0]!=(myButtonID.split("_")[1])){
+                  element.classList.remove('hidden');}})
+                //console.log(e);
+
+
+                let allRelationshipLinks = document.querySelectorAll('#alltags rect');
+                for (let i = 0; i < allRelationshipLinks.length; i++) {
+                  //console.log(allSignatureLinks[i].id);
+                  const myPanelID =  allRelationshipLinks[i].id;
+                  //console.log(myPanelID);
+                  let temp =myPanelID.split('_')[0];
+
+                  allRelationshipLinks[i].onclick = function(e) {
+                    let allRelationshipPanels= document.querySelectorAll('.relationship_box');
+                    for (let i = 0; i < allRelationshipPanels.length; i++) {
+                      if(allRelationshipPanels[i].id===myPanelID.split('_signature')[0]){
+                        console.log(allRelationshipPanels[i].id)
+                        allRelationshipPanels[i].classList.remove('hidden');
+                      }
+                    }
+                  }
+
+                }
+
+
+
+
+                //TODO:let them show after user click
+                let allRelationshipPanels= document.querySelectorAll('.relationship_box');
+                for (let i = 0; i < allRelationshipPanels.length; i++) {
+
+                 console.log(allRelationshipPanels[i].id)
+                 console.log(myButtonID.substring(13))
+                 let arr = allRelationshipPanels[i].id.split("_and_");
+                 let name1 = arr[0];
+
+                 if (myButtonID.substring(13)===(name1)) {
+                   console.log("The string contains 'bury'");
+                   console.log(allRelationshipPanels[i].classList)
+                   allRelationshipPanels[i].classList.remove('hidden');
+                 } else {
+                   //allRelationshipPanels[i]classList.add('hidden');
+                 }
+
+
                 }
               }
-            }
-
-          }
-
-
-
-
-          //TODO:let them show after user click
-          let allRelationshipPanels= document.querySelectorAll('.relationship_box');
-          for (let i = 0; i < allRelationshipPanels.length; i++) {
-
-           console.log(allRelationshipPanels[i].id)
-           console.log(myButtonID.substring(13))
-           let arr = allRelationshipPanels[i].id.split("_and_");
-           let name1 = arr[0];
-
-           if (myButtonID.substring(13)===(name1)) {
-             console.log("The string contains 'bury'");
-             console.log(allRelationshipPanels[i].classList)
-             allRelationshipPanels[i].classList.remove('hidden');
-           } else {
-             //allRelationshipPanels[i]classList.add('hidden');
-           }
-
-
-          }
-        }
-         // hide all other relationship panels
-
-         //myButton.classList.remove('hidden');
+    // relationship_svg.forEach(element => {
+    //   element.classList.add('hidden');})
       }
 
     }
