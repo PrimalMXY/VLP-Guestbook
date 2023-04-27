@@ -1,5 +1,9 @@
 <html lang="en">
 <head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script type="text/javascript" src="blowup/lib/blowup.min.js"></script>
+  <script type="text/javascript" src="blowup/demo/scripts/index.js"></script>
+  <script type="text/javascript" src="blowup/demo/scripts/prism.js"></script>
   <style>
 
     header {
@@ -314,11 +318,14 @@ button:focus {
 
   <div id="container_top">
     <h1>The Guests of Villa La Pietra</h1>
+    <div>
+      <button id="zoomer"> Zoom in</button>
+    </div>
   </div>
 
   <div id="container_book">
-    <img id="book_background" src="book.png" alt="guestbook //tobeedited">
-    <svg id="book_signatures" viewBox="0 0 1558 1080" style="position:absolute;">
+    <img id="book_background" class="demo-img" src="book.png" alt="guestbook //tobeedited">
+    <svg id="book_signatures" viewBox="0 0 1558 1080" style="position:absolute;" >
       <defs>
         <style>
           .cls-1 {
@@ -714,9 +721,34 @@ button:focus {
 
 
 
+
   </div>
 
-  <script>
+
+
+<script>
+//TODO: Blowup
+//to enable blowup, add class=hidden to the svg files.
+
+  let zoombtn= document.querySelector('#zoomer')
+  let zooming=false;
+  let svgsignature=document.querySelector('#book_signatures')
+  let svgtags=document.querySelector('#tags')
+
+  zoombtn.onclick=function(e){
+    if(zooming==false){
+      zooming=true
+      console.log("zoom!")
+      svgtags.classList.add('hidden')
+      svgsignature.classList.add('hidden')
+    }else{
+      zooming=false
+      console.log("stop zoom!")
+      svgtags.classList.remove('hidden')
+      svgsignature.classList.remove('hidden')
+    }
+
+  }
 
     // get a ref to all signature links in the SVG
     // CK: changed to grab 'a' tags instead of rectangles

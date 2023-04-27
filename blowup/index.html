@@ -1,0 +1,478 @@
+<!DOCTYPE html5>
+<html lang="en">
+  <head>
+    <title>blowup.js Demo</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Paul Krishnamurthy" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/blowup.min.js"></script>
+    <script type="text/javascript" src="demo/scripts/index.js"></script>
+    <script type="text/javascript" src="demo/scripts/prism.js"></script>
+
+    <style>
+      header {
+        background-color: #FFFFFF;
+        top:0px;
+      }
+      #menu{
+        width:80%;
+        padding:10px;
+        margin:auto;
+      }
+      body{
+        background-color: #A26050;
+        margin:0;
+      }
+
+
+      .signature_box{
+        background-color:rgba(34.05810445547104, 29.23320695757866, 29.23320695757866, 0.8500000238418579);
+  	    width:32%;
+  	    min-height: 20%;
+  		  border-top-left-radius:10px;
+  		  border-top-right-radius:10px;
+  		  border-bottom-left-radius:10px;
+  		  border-bottom-right-radius:10px;
+        position:absolute;
+        z-index:5;
+        color:white;
+        text-align: center;
+        padding: 1%;
+      }
+
+      .signature_info{
+        font-size: 0.8em;
+        margin: auto;
+        color:rgba(255, 255, 255, 1);
+  	    text-align:center;
+        padding:5%;
+  	    letter-spacing:0;
+      }
+
+      .signature_box img {
+        width: 60%;
+      }
+
+      .signature_box a {
+        color: #fff;
+      }
+      .relationship_box{
+        background-color:rgba(34.05810445547104, 29.23320695757866, 29.23320695757866, 0.8500000238418579);
+        width:15%;
+        min-height: 15%;
+        border-top-left-radius:10px;
+        border-top-right-radius:10px;
+        border-bottom-left-radius:10px;
+        border-bottom-right-radius:10px;
+        position:absolute;
+        z-index:5;
+        color:white;
+        text-align: center;
+        padding: 2%;
+
+
+      }
+      .relationship_info{
+        font-size: 1em;
+        margin: auto;
+        color:rgba(255, 255, 255, 1);
+        text-align:center;
+        padding:5%;
+        letter-spacing:0;
+      }
+
+
+
+      #bury{
+        top:20px;
+      }
+      #container_top{
+        display:block;
+        margin:auto;
+        position:relative;
+        padding:25px;
+      }
+      #container_top h1 {
+        font-size: 30px;
+        color:white;
+        text-align:center;
+        margin:auto;
+        align-content:center;
+      }
+
+      #container_bottom{
+        background-color: #221D1D;
+        margin:0;
+      }
+
+      #intro_text{
+        color:white;
+        width:85%;
+        margin:auto;
+        padding:40px;
+      }
+
+      .signature_box h3 {
+        font-size: 1.5em;
+        margin-bottom: 5px;
+      }
+
+
+      #book_pages{
+        background-color: #4B4F54;
+      }
+
+      #container_book {
+        position: relative;
+        width: 70%;
+        margin: auto;
+        padding-bottom:20px;
+      }
+
+      #book_background {
+        width: 100%;
+        z-index: 0;
+      }
+
+      #book_signatures {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 4;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      a:focus {
+        background-color: yellow;
+      }
+
+      #signature_hand {
+        left: -18%;
+        bottom: 15%;
+      }
+      #signature_woodward {
+        left: -18%;
+        bottom: 15%;
+      }
+      #signature_dewald {
+        left: -18%;
+        bottom: 5%;
+      }
+      #signature_loos {
+        left: -18%;
+        bottom: 5%;
+      }
+      #signature_hepburn {
+        left: -18%;
+        bottom: 5%;
+      }
+      #signature_sefton {
+        left: -18%;
+        bottom: 1%;
+      }
+      #signature_hughes {
+        left: -18%;
+        bottom: 5%;
+      }
+
+      #signature_foxell {
+        right: -18%;
+        top: 0px;
+      }
+      #signature_honour {
+        right: -18%;
+        top: 10%;
+      }
+      #signature_fleming {
+        right: -18%;
+        top: 10%;
+      }
+
+      #signature_owen {
+        right: -18%;
+        top: 10%;
+      }
+
+      #signature_mitchell {
+        right: -18%;
+        top: 10%;
+      }
+      #signature_hmitchell {
+        right: -18%;
+        top: -5%;
+      }
+
+      #signature_mckean {
+        right: -18%;
+        top: 0%;
+      }
+
+      #signature_bury {
+        left: -18%;
+        top: 0px;
+      }
+      #bury_and_foxell{
+        right:10px;
+        top:0px
+      }
+      #foxell_and_bury{
+        left:-10px;
+        top:0px
+      }
+
+
+  /* CSS */
+  .btn {
+    appearance: none;
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+    border-radius: 30px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+
+
+    font-size: 0.9em;
+
+    line-height: normal;
+
+    margin:5px;
+    outline: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left:10px;
+    padding-right:10px;
+    margin-bottom: 1px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+
+
+    will-change: transform;
+    z-index:5;
+  }
+
+  .btn:disabled {
+
+  }
+
+  .btn:hover {
+    color: #221D1D;
+    background-color: #FFFFFF;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+  }
+
+  .btn:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+
+  ul {
+    list-style-type: none;
+     margin: 0;
+     padding: 0;
+     overflow: hidden;
+
+  }
+  li {
+      float: right;
+  }
+  li a {
+      display: block;
+
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+  }
+
+  button:focus {
+    outline: 2px solid blue;
+  }
+
+    </style>
+
+
+
+  <title>VLP GUESTBOOK</title>
+  </head>
+
+  <body>
+    <header>
+      <div id="menu">
+      <h1 style="float:left;padding:0px;margin:0px;">
+        GuestBook
+      </h1>
+
+      <nav id="site_navigation">
+        <ul>
+          <li><a href="#about" tabindex="3">About</a></li>
+          <li><a href="#guestbook" tabindex="2">Guestbook</a></li>
+          <li><a href="#catalogue" tabindex="1">Catalogue</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+    <div id="container_top">
+      <h1>The Guests of Villa La Pietra</h1>
+    </div>
+
+    <div id="container_book">
+      <img id="book_background" class="demo-img" src="book.png" alt="guestbook //tobeedited">
+      <svg id="book_signatures" viewBox="0 0 1558 1080" style="position:absolute;" class="hidden">
+        <defs>
+          <style>
+            .cls-1 {
+              opacity: 0.1;
+            }
+            .cls-1:hover {
+              fill: #ff0;
+              opacity: .25;
+            }
+          </style>
+        </defs>
+        <g id="signatures" >
+          <!-- top of page 1 -->
+          <a id="hand" href="#" tabindex="4"
+             aria-label="Click here to access signature information about Leonard Hand"
+             aria-controls="signature_hand"
+             aria-expanded="false">
+            <rect id="hand" class="cls-1" x="278" y="283" width="412" height="36"/>
+          </a>
+
+          <a id="woodward" href="#" tabindex="5"
+             aria-label="Click here to access signature information about Elsie C. Woodward"
+             aria-controls="signature_woodward"
+             aria-expanded="false">
+            <rect class="cls-1" x="278" y="655" width="412" height="38"/>
+          </a>
+
+          <a id="dewald" href="#" tabindex="6"
+             aria-label="Click here to access signature information about Ernest T. DeWald"
+             aria-controls="signature_dewald"
+             aria-expanded="false">
+            <rect id="dewald" class="cls-1" x="278" y="716" width="412" height="28"/>
+          </a>
+
+          <a id="loos" href="#" tabindex="7"
+             aria-label="Click here to access signature information about Anita Loos"
+             aria-controls="signature_loos"
+             aria-expanded="false">
+            <rect id="loos" class="cls-1" x="278" y="864" width="412" height="28"/>
+          </a>
+
+          <a id="hepburn" href="#" tabindex="8"
+             aria-label="Click here to access signature information about Audrey Hepburn"
+             aria-controls="signature_hepburn"
+             aria-expanded="false">
+            <rect class="cls-1" x="278" y="892" width="412" height="43"/>
+          </a>
+
+          <a id="sefton" href="#" tabindex="9"
+             aria-label="Click here to access signature information about Josephine Sefton"
+             aria-controls="signature_sefton"
+             aria-expanded="false">
+            <rect class="cls-1" x="278" y="970" width="412" height="31"/>
+          </a>
+
+          <a id="hughes" href="#" tabindex="10"
+             aria-label="Click here to access signature information about Howard Hughes"
+             aria-controls="signature_hughes"
+             aria-expanded="false">
+            <rect class="cls-1" x="278" y="1001" width="412" height="31"/>
+          </a>
+
+
+
+          <!-- top of page 2 -->
+          <a id="foxell" href="#" tabindex="11"
+             aria-label="Click here to access signature information about Nigel Foxell"
+             aria-controls="signature_foxell"
+             aria-expanded="false">
+            <rect class="cls-1" x="877" y="66" width="363" height="56"/>
+          </a>
+
+
+          <a id="honour" href="#" tabindex="12"
+             aria-label="Click here to access signature information about Hugh Honour"
+             aria-controls="signature_honour"
+             aria-expanded="false">
+            <rect class="cls-1" x="877" y="486" width="363" height="29"/>
+          </a>
+
+          <a id="fleming" href="#" tabindex="13"
+            aria-label="Click here to access signature information about John Fleming"
+            aria-controls="signature_fleming"
+            aria-expanded="false">
+            <rect class="cls-1" x="877" y="515" width="363" height="29"/>
+          </a>
+
+          <a id="owen" href="#" tabindex="14"
+            aria-label="Click here to access signature information about William Mostyn-Owen"
+
+            aria-controls="signature_owen"
+            aria-expanded="false">
+            <rect class="cls-1" x="877" y="544" width="363" height="29"/>
+          </a>
+
+          <a id="mitchell" href="#" tabindex="15"
+            aria-label="Click here to access signature information about Anne Wood Mitchell"
+            aria-controls="signature_mitchell"
+            aria-expanded="false">
+            <rect class="cls-1" x="877" y="573" width="363" height="29"/>
+          </a>
+
+          <a id="hmitchell" href="#" tabindex="16"
+            aria-label="Click here to access signature information about William H. Mitchell"
+            aria-controls="signature_hmitchell"
+            aria-expanded="false">
+            <rect class="cls-1" x="877" y="602" width="363" height="22"/>
+          </a>
+
+          <a id="mckean" href="#" tabindex="17"
+            aria-label="Click here to access signature information about Margarett Sargent McKean"
+            aria-controls="signature_mckean"
+            aria-expanded="false">
+            <rect class="cls-1" x="877" y="913" width="363" height="22"/>
+          </a>
+
+
+        </g>
+      </svg>
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+    <div id="container_bottom">
+    <div id="intro_text">
+    <p>The guests' identities may be analyzed in terms of different criteria (social and professional position, nationality etc.). From the first glance, the very cosmopolitan milieu of Florence during the period is apparent. Guests of the Actons included prominent figures in the world of architecture (e.g. Darcy Braddell and Dorothy (Busse) Braddell from Scotland); art history (Thomas Whittemore, founder of the Byzantine Institute of America); art collecting (Charles Loeser; Martin and Caroline Ryerson from Chicago; James Kerr Branch and Beulah (Gould) Branch who also owned a Villa in Fiesole); costume and set designers Umberto Brunelleschi and Gino Carlo Sensani. It is worth noticing that guests connected with literary endeavors were mostly contemporaries of the Actons' younger generation. In fact by having attended Eton and Oxford both Harold and William had befriended a literary coterie that included Harold's friends among the "Bright Young Things"-Brian Howard, Robert Byron and Evelyn Waugh-who would frequently visit Villa La Pietra, leaving behind their own inscribed books. Other 'literati' include Norman Douglas, Edith Sitwell, Somerset Maugham, Violet Trefusis, Reginald Turner, "rebel Boston Brahmin" John Brooks Wheelwright.
+    </p><p>
+    The elite of American and European capitalism frequently attended events at Villa La Pietra, where they compared notes about art collecting, home decoration and garden planning: Arthur and Hortense Acton were themselves involved in similar endeavors. A few names may help in recalling such visitors: Ada Small Moore, wife of W.H.Moore (US Steel); banker Jules Semon Bache; the Du Puys; Belgian industrialist and art collector Adolphe Stoclet - who had his celebrated Brussels home designed by Josef Hoffman and decorated by Gustav Klimt. Royalty are also among the Actons' guests (mainly from countries that had recently witnessed regime changes: such as Prussia, Serbia etc.). Socialites of different profiles were often among the guests at Villa La Pietra as well as the emerging 'stars' of the show business (Lina Cavalieri, Mistinguett).
+    </p>
+    </div>
+
+    </div>
+
+
+  </body>
+</html>
