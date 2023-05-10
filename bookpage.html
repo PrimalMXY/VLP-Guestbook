@@ -20,11 +20,14 @@
       margin:0;
     }
 
+    .signature_left{
+
+    }
 
     .signature_box{
       background-color:rgba(34.05810445547104, 29.23320695757866, 29.23320695757866, 0.8500000238418579);
-	    width:32%;
-	    min-height: 20%;
+	    width:35%;
+	    height: 100%; /* min-height: 30% */
 		  border-top-left-radius:10px;
 		  border-top-right-radius:10px;
 		  border-bottom-left-radius:10px;
@@ -33,7 +36,33 @@
       z-index:5;
       color:white;
       text-align: center;
+      margin:auto;
       padding: 1%;
+      top: -7%;
+      left: -20%;
+
+    }
+
+    .signature_right{
+      left:80%
+    }
+    #too_small_container {
+      width: 100%;
+      height: 100vh;
+      background-color: #000;
+      color: #fff;
+      z-index: 10;
+      font-size: 200%;
+      text-align: center;
+      display: none;
+      top: 0px;
+      left: 0px;
+      position: fixed;
+    }
+
+
+    .signature_box img {
+      width: 60%;
     }
 
     .signature_info{
@@ -44,10 +73,45 @@
       padding:5%;
 	    letter-spacing:0;
     }
-
-    .signature_box img {
-      width: 60%;
+    @media screen and (min-width: 1024px) {
+        .signature_box {
+          font-size: 90%;
+        }
     }
+    @media screen and (max-width: 1300px) {
+
+        .signature_box img {
+          width: 50%;
+        }
+      }
+    @media screen and (max-width: 1200px) {
+
+        .signature_box img {
+          width: 40%;
+        }
+
+
+    }
+    @media screen and (max-width: 1100px) {
+
+        .signature_box img {
+          width: 25%;
+        }
+
+
+    }
+
+    @media screen and (max-width: 1023px) {
+        .signature_box {
+          font-size: 50%;
+          background-color: pink;
+        }
+        #too_small_container {
+          display: block;
+        }
+    }
+
+
 
     .signature_box a {
       color: #fff;
@@ -68,6 +132,13 @@
 
 
     }
+    .vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
     .relationship_info{
       font-size: 1em;
       margin: auto;
@@ -122,7 +193,8 @@
       position: relative;
       width: 70%;
       margin: auto;
-      padding-bottom:20px;
+      padding-bottom:40px;
+
     }
 
     #book_background {
@@ -141,17 +213,24 @@
       display: none;
     }
 
-    a:focus {
-      background-color: yellow;
-    }
 
+    a:visited {
+
+      background-color: transparent;
+
+    }
+    a:active {
+
+      background-color: transparent;
+
+    }
+/*
     #signature_hand {
-      left: -18%;
-      bottom: 15%;
+      top:-6%
     }
     #signature_woodward {
-      left: -18%;
-      bottom: 15%;
+
+
     }
     #signature_dewald {
       left: -18%;
@@ -217,10 +296,100 @@
     #foxell_and_bury{
       left:-10px;
       top:0px
-    }
+    } */
 
 
 /* CSS */
+#zoomer{
+  appearance: none;
+  background-color: transparent;
+  border: 1px solid #FFFFFF;
+  border-radius: 30px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+
+
+  font-size: 0.9em;
+
+  line-height: normal;
+
+  margin:5px;
+  outline: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left:10px;
+  padding-right:10px;
+  margin-bottom: 1px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+
+
+  will-change: transform;
+  z-index:5;
+
+}
+
+#zoomer:hover {
+  color: #221D1D;
+  background-color: #FFFFFF;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+#zoomer:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+#moreabout{
+  appearance: none;
+  background-color: transparent;
+  border: 1px solid #FFFFFF;
+  border-radius: 30px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+
+
+  font-size: 0.9em;
+
+  line-height: normal;
+
+  margin:5px;
+  outline: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left:10px;
+  padding-right:10px;
+  margin-bottom: 1px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+
+
+  will-change: transform;
+  z-index:5;
+
+}
+
+#moreabout:hover {
+  color: #221D1D;
+  background-color: #FFFFFF;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+#moreabout:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
 .btn {
   appearance: none;
   background-color: transparent;
@@ -291,6 +460,107 @@ li a {
 button:focus {
   outline: 2px solid blue;
 }
+#imagealt_hepburn{
+  background-color:rgba(34.05810445547104, 29.23320695757866, 29.23320695757866, 0.8500000238418579);
+  position: absolute;
+  left:80%;
+  top:22%;
+  z-index:10;
+  width:70%;
+  padding:15px;
+  margin:auto;
+  border-top-left-radius:10px;
+  border-top-right-radius:10px;
+  border-bottom-left-radius:10px;
+  border-bottom-right-radius:10px;
+}
+.altbtn {
+  position: absolute;
+   bottom:-1%;
+   left: 11%;
+   transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  appearance: none;
+  background-color:rgba(34.05810445547104, 29.23320695757866, 29.23320695757866, 0.8500000238418579);
+  border: 1px solid #FFFFFF;
+  border-radius: 30px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+
+
+  font-size: 0.9em;
+
+  line-height: normal;
+
+  margin:5px;
+  outline: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left:10px;
+  padding-right:10px;
+  margin-bottom: 1px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+
+
+  will-change: transform;
+  z-index:5;
+}
+.altbtn:hover {
+  color: #221D1D;
+  background-color: #FFFFFF;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+
+}
+
+.altbtn:active {
+  box-shadow: none;
+;
+}
+#altclose:hover {
+  color: #221D1D;
+  background-color: #FFFFFF;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+}
+
+#altclose{
+  appearance: none;
+  background-color: transparent;
+  border: 1px solid #FFFFFF;
+  border-radius: 30px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+
+
+  font-size: 0.9em;
+
+  line-height: normal;
+
+  margin:5px;
+  outline: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left:10px;
+  padding-right:10px;
+  margin-bottom: 1px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+
+
+  will-change: transform;
+
+}
+
 
   </style>
 
@@ -301,7 +571,7 @@ button:focus {
 
 <body>
   <header>
-    <div id="menu">
+    <!-- <div id="menu">
     <h1 style="float:left;padding:0px;margin:0px;">
       GuestBook
     </h1>
@@ -313,18 +583,22 @@ button:focus {
         <li><a href="#catalogue" tabindex="1">Catalogue</a></li>
       </ul>
     </nav>
-  </div>
+  </div> -->
 </header>
+  <div id="too_small_container">
+    <div style="top:50%; position:absolute;">Please increase your screen size to fullscreen or rotate your device for better experience
+    </div></div>
 
   <div id="container_top">
     <h1>The Guests of Villa La Pietra</h1>
     <div>
+      <button id="moreabout" onclick="location.href='index.html'" type="button" tabindex="15"> More about the guestbook</button>
       <button id="zoomer"> Zoom in</button>
     </div>
   </div>
 
   <div id="container_book">
-    <img id="book_background" class="demo-img" src="book.png" alt="guestbook //tobeedited">
+    <img id="book_background" class="demo-img" src="book.png" alt="A brown leather guestbook opened up to two parchment pages containing sixty signatures and dates between 1954 and 1955">
     <svg id="book_signatures" viewBox="0 0 1558 1080" style="position:absolute;" >
       <defs>
         <style>
@@ -339,49 +613,49 @@ button:focus {
       </defs>
       <g id="signatures">
         <!-- top of page 1 -->
-        <a id="hand" href="#" tabindex="4"
+        <a id="hand" href="#" tabindex="1"
            aria-label="Click here to access signature information about Leonard Hand"
            aria-controls="signature_hand"
            aria-expanded="false">
           <rect id="hand" class="cls-1" x="278" y="283" width="412" height="36"/>
         </a>
 
-        <a id="woodward" href="#" tabindex="5"
+        <a id="woodward" href="#" tabindex="2"
            aria-label="Click here to access signature information about Elsie C. Woodward"
            aria-controls="signature_woodward"
            aria-expanded="false">
           <rect class="cls-1" x="278" y="655" width="412" height="38"/>
         </a>
 
-        <a id="dewald" href="#" tabindex="6"
+        <a id="dewald" href="#" tabindex="3"
            aria-label="Click here to access signature information about Ernest T. DeWald"
            aria-controls="signature_dewald"
            aria-expanded="false">
           <rect id="dewald" class="cls-1" x="278" y="716" width="412" height="28"/>
         </a>
 
-        <a id="loos" href="#" tabindex="7"
+        <a id="loos" href="#" tabindex="4"
            aria-label="Click here to access signature information about Anita Loos"
            aria-controls="signature_loos"
            aria-expanded="false">
           <rect id="loos" class="cls-1" x="278" y="864" width="412" height="28"/>
         </a>
 
-        <a id="hepburn" href="#" tabindex="8"
+        <a id="hepburn" href="#" tabindex="5"
            aria-label="Click here to access signature information about Audrey Hepburn"
            aria-controls="signature_hepburn"
            aria-expanded="false">
           <rect class="cls-1" x="278" y="892" width="412" height="43"/>
         </a>
 
-        <a id="sefton" href="#" tabindex="9"
+        <a id="sefton" href="#" tabindex="6"
            aria-label="Click here to access signature information about Josephine Sefton"
            aria-controls="signature_sefton"
            aria-expanded="false">
           <rect class="cls-1" x="278" y="970" width="412" height="31"/>
         </a>
 
-        <a id="hughes" href="#" tabindex="10"
+        <a id="hughes" href="#" tabindex="7"
            aria-label="Click here to access signature information about Howard Hughes"
            aria-controls="signature_hughes"
            aria-expanded="false">
@@ -391,7 +665,7 @@ button:focus {
 
 
         <!-- top of page 2 -->
-        <a id="foxell" href="#" tabindex="11"
+        <a id="foxell" href="#" tabindex="8"
            aria-label="Click here to access signature information about Nigel Foxell"
            aria-controls="signature_foxell"
            aria-expanded="false">
@@ -399,21 +673,21 @@ button:focus {
         </a>
 
 
-        <a id="honour" href="#" tabindex="12"
+        <a id="honour" href="#" tabindex="9"
            aria-label="Click here to access signature information about Hugh Honour"
            aria-controls="signature_honour"
            aria-expanded="false">
           <rect class="cls-1" x="877" y="486" width="363" height="29"/>
         </a>
 
-        <a id="fleming" href="#" tabindex="13"
+        <a id="fleming" href="#" tabindex="10"
           aria-label="Click here to access signature information about John Fleming"
           aria-controls="signature_fleming"
           aria-expanded="false">
           <rect class="cls-1" x="877" y="515" width="363" height="29"/>
         </a>
 
-        <a id="owen" href="#" tabindex="14"
+        <a id="owen" href="#" tabindex="11"
           aria-label="Click here to access signature information about William Mostyn-Owen"
 
           aria-controls="signature_owen"
@@ -421,21 +695,21 @@ button:focus {
           <rect class="cls-1" x="877" y="544" width="363" height="29"/>
         </a>
 
-        <a id="mitchell" href="#" tabindex="15"
+        <a id="mitchell" href="#" tabindex="12"
           aria-label="Click here to access signature information about Anne Wood Mitchell"
           aria-controls="signature_mitchell"
           aria-expanded="false">
           <rect class="cls-1" x="877" y="573" width="363" height="29"/>
         </a>
 
-        <a id="hmitchell" href="#" tabindex="16"
+        <a id="hmitchell" href="#" tabindex="13"
           aria-label="Click here to access signature information about William H. Mitchell"
           aria-controls="signature_hmitchell"
           aria-expanded="false">
           <rect class="cls-1" x="877" y="602" width="363" height="22"/>
         </a>
 
-        <a id="mckean" href="#" tabindex="17"
+        <a id="mckean" href="#" tabindex="14"
           aria-label="Click here to access signature information about Margarett Sargent McKean"
           aria-controls="signature_mckean"
           aria-expanded="false">
@@ -451,6 +725,7 @@ button:focus {
         <style>
           .cls-2 {
             opacity: 0.25;
+            fill: #d4775f;
           }
           .cls-2:hover {
             fill: pink;
@@ -459,7 +734,7 @@ button:focus {
         </style>
       </defs>
       <g id="alltags">
-        <rect id="foxell_fromuk_ArtIndustry" class="cls-2 hidden" x="877" y="66" width="333" height="56"/>
+        <rect id="foxell_fromuk_ArtIndustry" class="cls-2 hidden" x="877" y="66" width="363" height="56"/>
 
         <rect id="woodward_fromus_Philanthropy_Business" class="cls-2 hidden" x="278" y="655" width="412" height="38"/>
         <rect id="hand_fromus_Politics_HusbandofFrancesA.Hand" class="cls-2 hidden" x="278" y="283" width="412" height="36"/>
@@ -479,118 +754,174 @@ button:focus {
 
 
     <div class="signature_box" id="signature_hand">
+      <img src="arrow.png" alt="an arrow pointing to the signature" style="position:absolute; left:100%; top:29%; width:8%; ">
+        <div class="vertical-center">
       <h3>Learned Hand </h3>
       <div style='margin:10px;font-size: 0.9em;'>United States, 1872-1961</div>
-      <img src="arrow.png" alt="an arrow pointing to the signature" style="position:absolute; left:100%; top:32%; width:8%; ">
-      <img src="portraits/hand.jpg" alt="A middle-aged Learned Hand sits to the side with his hands on his lap and faces the camera; he wears a grey suit and glasses.
-">
-      <div class="signature_info">
+      <div style='margin:10px;font-size: 0.9em;'>  Signed May 27, 1954</div>
 
-    The former federal trial judge, Learned Hand, seems to be enjoying his retirement, travelling to Florence with his wife Frances. It's no surprise this couple is highly educated, him from Harvard Law School in 1896 and her from Bryn Mawr. After retiring, Hand caused quite a stir when he spoke out publicly about Senator McCarthy's anti-communist campaign.
-      </div>
-      <div style="margin:10px;"><p style="font-size: 0.75em;">Click the buttons to see people who share similar profession with Hand:</p>
+
+      <img src="portraits/hand.jpg" alt="A middle-aged Learned Hand sits to the side with his hands on his lap and faces the camera; he wears a grey suit and glasses.">
+      <div class="signature_info">
+        Former federal trial judge <a href="https://en.wikipedia.org/wiki/Learned_Hand" target="_blank">Learned Hand</a> is enjoying his recent 1951 retirement, travelling to Florence with his wife Frances. After retiring,
+        Hand caused quite a stir when he spoke out publicly against Senator McCarthy's anti-communist campaign. Now taking a brief break from politics,
+        this highly-educated power couple (he from Harvard Law School in 1896 and she attended <a href="https://academic.oup.com/book/2132/chapter/142083193" target="_blank">Bryn Mawr in 1894</a>) can cherish each other's company amid the Tuscan hillsides in full spring bloom.
+    </div>
+      <div style="margin:10px;"><p style="font-size: 0.75em;">Click the tags below to explore national, professional, and familial connections with Hand:</p>
       <button class="btn" id="showRelation_hand_fromus" data-showing="false">From United States</button>
       <button class="btn" id="showRelation_hand_Politics" data-showing="false">Politics</button>
       <button class="btn" id="showRelation_hand_HusbandofFrancesA.Hand" data-showing="false">Husband of Frances A. Hand</button>
       </div>
     </div>
+    </div>
 
 
     <div class="signature_box" id="signature_woodward">
+        <img src="arrow.png" alt="an arrow pointing to the signature" style="position:absolute; left:100%; top:61.5%; width:8%; ">
+      <div class="vertical-center">
       <h3>Elsie C. Woodward  </h3>
       <div style='margin:10px;font-size: 0.9em;'>United States, 1882-1981</div>
-      <img src="arrow.png" alt="an arrow pointing to the signature" style="position:absolute; left:100%; top:50%; width:8%; ">
+      <div style='margin:10px;font-size: 0.9em;'> Signed July 21, 1954 </div>
+
 
       <div class="signature_info">
-        Known as one of the "Cryder Triplets;" Elsie Cryder Woodward and her sisters were notorious among high society for their charm and grace as teenagers. All three sisters married well; Elsie landed the Vice President of Hanover National Bank and prized horse racer, William Woodward. She continues to live her lavish lifestyle while generously supporting causes related to public health and the arts.
-      </div>
-      <div style="margin:10px;"><p style="font-size: 0.75em;">Click the buttons to see people who share similar profession with Woodward:</p>
+        Known as one of the <a href="https://www.southamptonhistory.org/post/high-style-in-the-gilded-age-the-cryder-triplets" target="_blank">"Cryder Triplets,"</a><a href= "https://www.nytimes.com/1981/07/14/obituaries/elsie-c-woodward-philanthropist-dies-at-98.html" target="_blank"> Elsie Cryder Woodward </a>and her sisters have notoriously charmed high society with their grace from back when they were teenagers.
+        All three sisters have since married well: but Elsie landed the Vice President of Hanover National Bank and prized horse racer <a href="https://behindthehedges.com/amazing-turbulent-lives-cryders-southampton/" target="_blank">William Woodward</a>.
+        At the time of her visit to the Villa, her lavish lifestyle is on full view while generously supporting causes related to public health and the arts.
+    </div>
+      <div style="margin:10px;"><p style="font-size: 0.75em;">Click the tags below to explore national, professional, and familial connections with Woodward:</p>
       <button class="btn" id="showRelation_woodward_fromus" data-showing="false">From United States</button>
       <button class="btn" id="showRelation_woodward_Philanthropy" data-showing="false">Philanthropy</button>
       <button class="btn" id="showRelation_woodward_Business" data-showing="false">Business</button>
       </div>
     </div>
+    </div>
 
 
     <div class="signature_box" id="signature_dewald">
+        <img src="arrow.png" alt="an arrow pointing to the signature" style="position:absolute; left:100%; top:66%; width:8%; ">
+      <div class="vertical-center">
       <h3>Ernest T. DeWald  </h3>
       <div style='margin:10px;font-size: 0.9em;'>United States, 1891-1968</div>
-      <img src="arrow.png" alt="an arrow pointing to the signature" style="position:absolute; left:100%; top:64%; width:8%; ">
+      <div style='margin:10px;font-size: 0.9em;'>Signed July 31, 1954  </div>
+
       <img src="portraits/dewald.png" alt="Ernest DeWald stands on the right along with 3 other soldiers on the left, all looking down at religious objects on a table in front of them.
     ">
       <div class="signature_info">
-        Professor and Director of the Princeton University Art Museum, Ernest T. DeWald has returned to Italy! As a Monuments Man stationed in Italy during World War II, he put his knowledge of Renaissance art to good use, protecting and repairing priceless art and architecture from the ravages of war. He is back to be awarded the Stella della Solidarieta in recognition of this work.
+        Professor and Director of the Princeton University Art Museum,
+        <a href="https://www.monumentsmenandwomenfnd.org/dewald-lt-col-ernest-t" target="_blank">Ernest T. DeWald </a>has returned to Italy at long last! As a <a href="https://en.wikipedia.org/wiki/Monuments,_Fine_Arts,_and_Archives_program" target="_blank">Monuments Man</a> stationed in Italy during World War II,
+        he put his knowledge of Renaissance art to good use, protecting and repairing priceless art and architecture
+        from the ravages of war. He is back to be awarded the Stella della Solidarieta in recognition of this work.
 
 
       </div>
-      <div style="margin:10px;"><p style="font-size: 0.75em;">Click the buttons to see people who share similar profession with DeWald:</p>
+      <div style="margin:10px;"><p style="font-size: 0.75em;">Click the tags below to explore national, professional, and familial connections with DeWald:</p>
       <button class="btn" id="showRelation_dewald_fromus" data-showing="false">From United States</button>
       <button class="btn" id="showRelation_dewald_Art" data-showing="false">Art</button>
       <button class="btn" id="showRelation_dewald_Museums" data-showing="false">Museums</button>
       </div>
     </div>
+    </div>
 
 
     <div class="signature_box" id="signature_loos">
+      <img src="arrow.png" alt="an arrow pointing to the signature" style="position:absolute; left:100%; top:79%; width:8%; ">
+      <div class="vertical-center">
       <h3>Anita Loos  </h3>
       <div style='margin:10px;font-size: 0.9em;'>United States, 1889-1981</div>
-      <img src="arrow.png" alt="an arrow pointing to the signature" style="position:absolute; left:100%; top:80%; width:8%; ">
+      <div style='margin:10px;font-size: 0.9em;'>Signed August 22, 1954 </div>
+
       <img src="portraits/loos.png" alt="A young Anita Loos sits and poses for a photo in 1920. She has bobbed dark hair and wears a long sleeve dress with lace collar.
   ">
       <div class="signature_info">
-      Rumor has it that Anita Loos was seen at the Villa La Pietra alongside entertainment colleagues Howard Hughes and Audrey Hepburn. Loos was the first female staff screenwriter in Hollywood and notably wrote the 1925 comic novel, Gentlemen Prefer Blondes, of which the recent film adaptation was based. It seems she and the young Hepburn struck up a friendship while working together on the Broadway adaptation of Gigi.
-
-      </div>
-      <div style="margin:10px;"><p style="font-size: 0.75em;">Click the buttons to see people who share similar profession with Loos:</p>
+        <a href="https://en.wikipedia.org/wiki/Anita_Loos" target="_blank">Anita Loos </a>was recently seen walking the grounds of Villa La Pietra this week,
+        alongside entertainment colleagues Howard Hughes and Audrey Hepburn.
+        Loos was the first female staff screenwriter in Hollywood and notably wrote the 1925 comic novel,
+        <a href="https://en.wikipedia.org/wiki/Gentlemen_Prefer_Blondes_(novel)" target="_blank">Gentlemen Prefer Blondes</a>, of which the hit 1953 film adaptation was based!
+        It seems she and the young Hepburn struck up a friendship while working together on the Broadway adaptation of <a href="https://en.wikipedia.org/wiki/Gigi_(play)" target="_blank">Gigi</a> back in 1951.  </div>
+      <div style="margin:10px;"><p style="font-size: 0.75em;">Click the tags below to explore national, professional, and familial connections with Loos:</p>
       <button class="btn" id="showRelation_loos_fromus" data-showing="false">From United States</button>
       <button class="btn" id="showRelation_loos_Entertainment" data-showing="false">Entertainment</button>
       <button class="btn" id="showRelation_loos_Writing" data-showing="false">Writing</button>
       </div>
     </div>
+    </div>
 
 
     <div class="signature_box" id="signature_hepburn">
+      <div id="imagealt_hepburn" class="hidden">
+        <H3>Image Description</h3>
+        <p>A black and white photograph of 27-year-old Audrey Hepburn, a light-skinned woman standing smiling in front of a plain brick wall. She has short dark hair with swept bangs, wears a long-sleeved white dress, and crosses her arms.</p>
+        <button id="altclose"> Close </button>
+      </div>
+      <img src="arrow.png" alt="an arrow pointing to the signature" style="position:absolute; left:100%; top:82%; width:8%; ">
+      <div class="vertical-center">
       <h3>Audrey Hepburn</h3>
       <div style='margin:10px;font-size: 0.9em;'>United Kingdom, 1929-1993</div>
-      <img src="arrow.png" alt="an arrow pointing to the signature" style="position:absolute; left:100%; top:82%; width:8%; ">
-      <img src="portraits/hepburn.jpg" alt="Audrey Hepburn stands in front of a brick wall with a soft smile and arms crossed. ">
+      <div style='margin:10px;font-size: 0.9em;'>Signed August 22, 1954 </div>
+
+      <div style="position: relative; width: 60%;margin:auto;"><img style="width:100%; "src="portraits/hepburn.jpg" alt="Audrey Hepburn in a white dress stands in front of a brick wall with a soft smile and arms crossed. ">
+        <button class="altbtn">ALT</button>
+      </div>
       <div class="signature_info">
 
-      Coming out of her success in the films Roman Holiday and Sabrina, rising star Audrey Hepburn was spotted mingling at the Villa La Pietra in Florence. After a stint as a chorus girl, she first found fame with the Broadway show, Gigi, and after winning numerous awards for her performances in film, has returned to the stage with her role in Ondine. There are whispers that Ms. Hepburn is seeing her handsome Ondine co-star, the former RKO Studios actor, Mel Ferrer. Do I hear wedding bells?
+        Coming out of her recent success in the films Roman Holiday and Sabrina,
+        rising star <a href="https://en.wikipedia.org/wiki/Audrey_Hepburn" target="_blank">Audrey Hepburn</a> was spotted mingling at the Villa La Pietra in Florence.
+        After a stint as a chorus girl, she first found fame with the Broadway 1951 show, Gigi.
+        After winning numerous awards for her performances in film, she has returned to the stage with her role in Ondine.
+        There are whispers that Ms. Hepburn is now seeing her handsome Ondine co-star, the former RKO Studios actor Mel Ferrer.
+        Do I hear wedding bells?
 
       </div>
-      <div style="margin:10px;"><p style="font-size: 0.75em;">Click the buttons to see people who share similar profession with Hepburn:</p>
+      <div style="margin:10px;"><p style="font-size: 0.75em;">Click the tags below to explore national, professional, and familial connections with Hepburn:</p>
       <button class="btn" id="showRelation_hepburn_fromuk" data-showing="false">From UK</button>
       <button class="btn" id="showRelation_hepburn_Entertainment" data-showing="false">Entertainment</button>
       <button class="btn" id="showRelation_hepburn_Philanthropy" data-showing="false">Philanthropy</button>
       </div>
     </div>
+    </div>
 
 
     <div class="signature_box" id="signature_sefton">
+      <div class="vertical-center">
       <h3>Josephine Sefton  </h3>
       <div style='margin:10px;font-size: 0.9em;'>United States, 1903-1980</div>
-      <img src="arrow.png" alt="an arrow pointing to the signature" style="position:absolute; left:100%; top:87%; width:8%; ">
-      <img src="portraits/sefton.jpg" alt="Josephine Sefton smiles standing with her husband Hugh Molyneaux in a crowd; she wears a long fur coat, hat, and leather handbag.
+      <div style='margin:10px;font-size: 0.9em;'>Signed August 22, 1954
+ </div>
+      <img src="arrow.png" alt="an arrow pointing to the signature" style="position:absolute; left:100%; top:92%; width:8%; ">
+      <img src="portraits/sefton.jpg" style="width:50%"alt="Josephine Sefton smiles standing with her husband Hugh Molyneaux in a crowd; she wears a long fur coat, hat, and leather handbag.
   ">
       <div class="signature_info">
-    Josephine Sefton is causing quite a stir in Florence! The former dress model turned Countess has enjoyed marriage to Hugh Molyneaux, the 7th Earl of Sefton, for a whopping 15 years. This lady is one to watch, with her fierce nickname ‘Foxy’ and connections to the notorious Wallis Simpson – the Duchess of Windsor is rumored to be the matchmaker behind the successful Sefton union.
-      </div>
-      <div style="margin:10px;"><p style="font-size: 0.75em;">Click the buttons to see people who share similar profession with Sefton:</p>
+        <a href="http://theesotericcuriosa.blogspot.com/2013/09/fabulous-foxy-gwynne-bffs-with-duchess.html" target="_blank">Josephine Sefton</a> is causing quite a stir in Florence today!
+        The former dress model turned Countess has enjoyed marriage to <a href="https://en.wikipedia.org/wiki/Earl_of_Sefton" target="_blank">Hugh Molyneaux</a>,
+        the 7th Earl of Sefton, for a whopping 15 years.
+        This lady is one to watch, with her fierce nickname 'Foxy' and her close connection to the notorious <a href="https://en.wikipedia.org/wiki/Wallis_Simpson" target="_blank">Wallis Simpson</a>,
+        Duchess of Windsor. In fact, the Duchess is even rumored to be the matchmaker behind this successful Sefton union.  </div>
+
+      <div style="margin:10px;"><p style="font-size: 0.75em;">Click the tags below to explore national, professional, and familial connections with Sefton:</p>
       <button class="btn" id="showRelation_sefton_fromus" data-showing="false">From United States</button>
       <button class="btn" id="showRelation_sefton_Nobility" data-showing="false">Nobility</button>
       <button class="btn" id="showRelation_sefton_Politics" data-showing="false">Politics</button>
       </div>
     </div>
+    </div>
 
     <div class="signature_box" id="signature_hughes">
+      <img src="arrow.png" alt="an arrow pointing to the signature" style="position:absolute; left:100%; top:92%; width:8%; ">
+      <div class="vertical-center">
       <h3>Howard Hughes  </h3>
       <div style='margin:10px;font-size: 0.9em;'>United States, 1905-1976</div>
-      <img src="arrow.png" alt="an arrow pointing to the signature" style="position:absolute; left:100%; top:92%; width:8%; ">
+      <div style='margin:10px;font-size: 0.9em;'>Signed August 22, 1954
+      </div>
+
       <img src="portraits/hughes.jpg" alt="Howard Hughes faces the camera wearing his hair slicked back and a dark suit and tie.">
       <div class="signature_info">
-        The charming Howard Hughes is known for his RKO Studios Hollywood films, business prowess, and philanthropy. But that’s not all, this jack of all trades also broke multiple aviation records, including a mind-boggling feat of flying around the world in just ninety one hours back in 1938.     </div>
-      <div style="margin:10px;"><p style="font-size: 0.75em;">Click the buttons to see people who share similar profession with Sefton:</p>
+        Charming <a href="https://en.wikipedia.org/wiki/Howard_Hughes" target="_blank">Howard Hughes</a> is known for his RKO Studios Hollywood films,
+        his business prowess, and his philanthropy.
+        But that's not all: this jack-of-all-trades also has broken multiple aviation records,
+        including the mind-boggling feat of flying around the world in just ninety-one hours back in 1938,
+        when hardly anyone had taken to the skies! Perhaps an Italian film is in the works?</div>
+        <div style="margin:10px;"><p style="font-size: 0.75em;">Click the tags below to explore national, professional, and familial connections with Sefton:</p>
       <button class="btn" id="showRelation_hughes_fromus" data-showing="false">From United States</button>
       <button class="btn" id="showRelation_hughes_Entertainment" data-showing="false">Entertainment</button>
       <button class="btn" id="showRelation_hughes_Business" data-showing="false">Business</button>
@@ -598,54 +929,74 @@ button:focus {
       <button class="btn" id="showRelation_hughes_Aviation" data-showing="false">Aviation</button>
       </div>
     </div>
+    </div>
 
 
-    <div class="signature_box" id="signature_foxell">
+
+
+    <div class="signature_box signature_right" id="signature_foxell">
+        <img src="arrow.png" alt="an arrow pointing to the signature" style="position:absolute; left:-7.9%; top:12%; width:8%;  transform: scaleX(-1);">
+      <div class="vertical-center">
       <h3>Nigel Foxell</h3>
         <div style='margin:10px;font-size: 0.9em;'>United Kingdom, 1931-2018
         </div>
-      <img src="arrow.png" alt="an arrow pointing to the signature" style="position:absolute; left:-7.9%; top:12%; width:8%;  transform: scaleX(-1);">
+        <div style='margin:10px;font-size: 0.9em;'>Signed September 12, 1954</div>
+
 
       <div class="signature_info">
-        British art student, Nigel Foxell, is getting quite the education while visiting the Villa La Pietra in Florence! After graduating from Exeter College Oxford, he won the prestigious 1954 Lawrence Binyon Prize, granting him the opportunity to to travel and study art and architecture in Italy. And where better to learn from the masters than the Villa La Pietra itself?
-      </div>
-      <div style="margin:10px;"><p style="font-size: 0.75em;">Click the buttons to see people who share similar profession with Foxell:</p>
+        British art student <a href="https://fortnightlyreview.co.uk/2018/12/nigel-foxell/" target="_blank">Nigel Foxell</a> is getting quite the education
+        while visiting the Villa La Pietra in Florence! After graduating from Exeter College Oxford this year,
+        he won the prestigious 1954 Lawrence Binyon Prize,
+        granting him the opportunity to travel and study art and architecture in Italy.
+        And where better to learn about exquisite art than within the halls of Villa La Pietra?
+  </div>
+      <div style="margin:10px;"><p style="font-size: 0.75em;">Click the tags below to explore national, professional, and familial connections with Foxell:</p>
       <button class="btn" id="showRelation_foxell_fromuk" data-showing="false">From United Kingdom</button>
       <button class="btn" id="showRelation_foxell_Art" data-showing="false">Art</button>
       <button class="btn" id="showRelation_foxell_Architecture" data-showing="false">Architecture </button>
 
       </div>
     </div>
+    </div>
 
-    <div class="signature_box" id="signature_honour">
+    <div class="signature_box signature_right" id="signature_honour">
+      <img src="arrow.png" alt="an arrow pointing to the signature" style="position:absolute; left:-7.9%; top:47%; width:8%;  transform: scaleX(-1);">
+
+      <div class="vertical-center">
       <h3>Hugh Honour</h3>
         <div style='margin:10px;font-size: 0.9em;'>United Kingdom, 1927-2016
-        </div>
-      <img src="arrow.png" alt="an arrow pointing to the signature" style="position:absolute; left:-7.9%; top:40%; width:8%;  transform: scaleX(-1);">
+        </div>  <div style='margin:10px;font-size: 0.9em;'>Signed October 28, 1954</div>
 
       <div class="signature_info">
-        Hugh Honour, the Assistant Director of the Leeds Art Gallery, has reportedly left his job after just one year to live with his partner John Fleming in Italy. How romantic! The two were seen at Villa La Pietra, likely talking about their plans to collaborate on an art history book in the future.
-  </div>
-      <div style="margin:10px;"><p style="font-size: 0.75em;">Click the buttons to see people who share similar profession with Foxell:</p>
+       <a href="https://en.wikipedia.org/wiki/Hugh_Honour" target="_blank">Hugh Honour</a>, the Assistant Director of the Leeds Art Gallery,
+       has reportedly left his job after just one year to live with his partner <a href="https://www.theguardian.com/artanddesign/2016/may/26/hugh-honour-obituary" target="_blank">John Fleming</a> in Italy.
+       How romantic! The two were seen at Villa La Pietra this week,
+      likely talking about their innovative plans to collaborate on an <a href="https://www.nytimes.com/2016/06/05/books/hugh-honour-art-historian-and-author-dies-at-88.html" target="_blank">art history book </a>together.  </div>
+      <div style="margin:10px;"><p style="font-size: 0.75em;">Click the tags below to explore national, professional, and familial connections with Foxell:</p>
       <button class="btn" id="showRelation_honour_fromuk" data-showing="false">From United Kingdom</button>
       <button class="btn" id="showRelation_honour_Art" data-showing="false">Art</button>
       <button class="btn" id="showRelation_honour_Museums" data-showing="false">Museums</button>
       <button class="btn" id="showRelation_honour_Architecture" data-showing="false">Architecture </button>
       <button class="btn" id="showRelation_honour_Writing" data-showing="false">Writing </button>
       <button class="btn" id="showRelation_honour_honourANDfleming" data-showing="false">Relationship with John Fleming </button>
-
+    </div>
       </div>
     </div>
-    <div class="signature_box" id="signature_fleming">
+    <div class="signature_box signature_right" id="signature_fleming">
+        <img src="arrow.png" alt="an arrow pointing to the signature" style="position:absolute; left:-7.9%; top:48%; width:8%;  transform: scaleX(-1);">
+      <div class="vertical-center">
       <h3>John Fleming</h3>
         <div style='margin:10px;font-size: 0.9em;'>United Kingdom, 1919-2001
-        </div>
-      <img src="arrow.png" alt="an arrow pointing to the signature" style="position:absolute; left:-7.9%; top:55%; width:8%;  transform: scaleX(-1);">
+        </div> <div style='margin:10px;font-size: 0.9em;'>Signed October 28, 1954</div>
+
 
       <div class="signature_info">
-        John Fleming, a solicitor and amateaur art historian, joined his partner, Hugh Honour, on a trip to Villa La Pietra. They were accompanied by William Mostyn-Owen, whom they had come to know at Bernard Berenson's neighboring villa, I Tatti. Apparently Fleming dreams about writing on art and architecture; there is no better place to start than at Villa La Pietra!
-  </div>
-      <div style="margin:10px;"><p style="font-size: 0.75em;">Click the buttons to see people who share similar profession with Fleming:</p>
+      <a href="https://www.theguardian.com/artanddesign/2016/may/26/hugh-honour-obituary" target="_blank">John Fleming</a>, a solicitor and budding art historian,
+      joined his partner, <a href="https://en.wikipedia.org/wiki/Hugh_Honour" target="_blank">Hugh Honour</a>, on a trip to Villa La Pietra.
+      They were accompanied by William Mostyn-Owen, whom they had come to know at Bernard Berenson's neighboring villa,
+      I Tatti. Apparently Fleming dreams about writing on art and architecture;
+      there is no better place to start than at Villa La Pietra!  </div>
+      <div style="margin:10px;"><p style="font-size: 0.75em;">Click the tags below to explore national, professional, and familial connections with Fleming:</p>
       <button class="btn" id="showRelation_fleming_fromuk" data-showing="false">From United Kingdom</button>
       <button class="btn" id="showRelation_fleming_Art" data-showing="false">Art</button>
       <button class="btn" id="showRelation_fleming_Architecture" data-showing="false">Architecture </button>
@@ -654,66 +1005,92 @@ button:focus {
 
       </div>
     </div>
-    <div class="signature_box" id="signature_owen">
+    </div>
+
+
+    <div class="signature_box signature_right" id="signature_owen">
+        <img src="arrow.png" alt="an arrow pointing to the signature" style="position:absolute; left:-7.9%; top:51%; width:8%;  transform: scaleX(-1);">
+        <div class="vertical-center">
       <h3>William Mostyn-Owen</h3>
         <div style='margin:10px;font-size: 0.9em;'>United Kingdom, 1929-2011
-        </div>
-      <img src="arrow.png" alt="an arrow pointing to the signature" style="position:absolute; left:-7.9%; top:60%; width:8%;  transform: scaleX(-1);">
+        </div><div style='margin:10px;font-size: 0.9em;'>Signed October 28, 1954</div>
 
       <div class="signature_info">
-        William Mostyn-Owen recently went to see his friends, the Actons, at Villa La Pietra. Apparently, he is quite the frequent visitor, as he lives close by at Villa I Tatti. It seems Mr. Mostyn-Owen, the art historian and former Metropolitan Museum of Art employee, is busy working alongside his colleague, Bernard Berenson, on something exciting!
-    </div>
-      <div style="margin:10px;"><p style="font-size: 0.75em;">Click the buttons to see people who share similar profession with Mostyn-Owen:</p>
+        <a href="https://en.wikipedia.org/wiki/William_Mostyn-Owen" target="_blank">William Mostyn-Owen</a> recently went to see his friends, the Actons, at Villa La Pietra.
+        He happens to be a frequent visitor, as he lives close by these days at <a href="https://www.theguardian.com/education/2011/jul/20/william-mostyn-owen-obituary" target="_blank">Villa I Tatti</a>.
+        It seems Mr. Mostyn-Owen, as a current art historian and a former Metropolitan Museum of Art employee,
+        is busy working alongside his art history-loving colleague, <a href="https://en.wikipedia.org/wiki/Bernard_Berenson" target="_blank">Bernard Berenson</a>, on something exciting.    </div>
+      <div style="margin:10px;"><p style="font-size: 0.75em;">Click the tags below to explore national, professional, and familial connections with Mostyn-Owen:</p>
       <button class="btn" id="showRelation_owen_fromuk" data-showing="false">From United Kingdom</button>
       <button class="btn" id="showRelation_owen_Art" data-showing="false">Art</button>
       <button class="btn" id="showRelation_owen_Museums" data-showing="false">Museums </button>
       <button class="btn" id="showRelation_owen_Writing" data-showing="false">Writing </button>
       </div>
     </div>
-    <div class="signature_box" id="signature_mitchell">
+    </div>
+
+
+    <div class="signature_box signature_right" id="signature_mitchell">
+      <img src="arrow.png" alt="an arrow pointing to the signature" style="position:absolute; left:-7.9%; top:54%; width:8%;  transform: scaleX(-1);">
+    <div class="vertical-center">
+
+
       <h3>Anne Wood Mitchell</h3>
         <div style='margin:10px;font-size: 0.9em;'>United States, 1909-1990
-        </div>
-      <img src="arrow.png" alt="an arrow pointing to the signature" style="position:absolute; left:-7.9%; top:60%; width:8%;  transform: scaleX(-1);">
-
+        </div><div style='margin:10px;font-size: 0.9em;'>Signed October 28, 1954</div>
       <div class="signature_info">
-        Anne Wood Mitchell joined her distinguished husband on a visit to his cousin, Hortense Acton, in Florence. No stranger to rubbing elbows with the elite, this socialite comes from a prominent family - she is the daughter of the former president and chairman of Sears Roebuck and Company. Business-savvy in her own right, she currently serves as board president for the Children's Memorial Hospital of Chicago.
-  </div>
-      <div style="margin:10px;"><p style="font-size: 0.75em;">Click the buttons to see people who share similar profession with Mitchell:</p>
+      <a href="https://www.chicagotribune.com/news/ct-xpm-1990-11-03-9004010057-story.html" target="_blank">Anne Wood Mitchell</a> joined her distinguished husband William on a visit to his cousin Hortense Acton in Florence.
+      No stranger to rubbing elbows with the elite, this socialite comes from a prominent family -
+      she is the daughter of the former president and chairman of Sears Roebuck and Company.
+       Quite business-savvy in her own right, she currently serves as board president for the Children's Memorial Hospital of Chicago.   </div>
+      <div style="margin:10px;"><p style="font-size: 0.75em;">Click the tags below to explore national, professional, and familial connections with Mitchell:</p>
       <button class="btn" id="showRelation_mitchell_fromus" data-showing="false">From United States</button>
       <button class="btn" id="showRelation_mitchell_Business" data-showing="false">Business</button>
       <button class="btn" id="showRelation_mitchell_Writing" data-showing="false">Writing </button>
       <button class="btn" id="showRelation_mitchell_FamilyMichell" data-showing="false">Family tie to William H. Mitchell </button>
       </div>
     </div>
-    <div class="signature_box" id="signature_hmitchell">
+    </div>
+
+    <div class="signature_box signature_right" id="signature_hmitchell">
+      <img src="arrow.png" alt="an arrow pointing to the signature" style="position:absolute; left:-7.9%; top:56%; width:8%;  transform: scaleX(-1);">
+      <div class="vertical-center">
       <h3>William H. Mitchell</h3>
       <div style='margin:10px;font-size: 0.9em;'>United States, 1895-1987</div>
-      <img src="arrow.png" alt="an arrow pointing to the signature" style="position:absolute; left:-7.9%; top:55%; width:8%;  transform: scaleX(-1);">
+      <div style='margin:10px;font-size: 0.9em;'>Signed October 31, 1954</div>
+
       <img src="portraits/hmitchell.jpg" alt="The 1918 passport photo of a young William Mitchell. He stares ahead with his hair slicked back.">
       <div class="signature_info">
-    There is word that William Hamilton Mitchell, the cousin of Villa owner Hortense Acton, has just arrived for a visit. Mitchell is a wealthy investment banker living in Chicago with his beautiful wife Anne. But the juicy story follows his first wife Ginevra King-Mitchell, whose teenage romance with F. Scott Fitzgerald and later marriage to Mitchell are rumored to have inspired the characters Daisy and Tom Buchanan in legendary novel, The Great Gatsby.
+        There is word that <A href="https://www.chicagomag.com/real-estate/september-2011/decrepit-lake-forest-mansion-with-literary-and-banking-ties-sells-after-four-years/" target="_blank">William Hamilton Mitchell</a>, the cousin of Villa owner Hortense Acton,
+        has just arrived for a visit. Mitchell is a wealthy investment banker living in Chicago with his beautiful wife Anne.
+        But the juicy story follows his first wife <a href="https://en.wikipedia.org/wiki/Ginevra_King" target="_blank">Ginevra King-Mitchell</a>, whose teenage romance with F. Scott Fitzgerald and later marriage to Mitchell are rumored to have inspired the characters Daisy and Tom Buchanan in the legendary novel, The Great Gatsby.
     </div>
-      <div style="margin:10px;"><p style="font-size: 0.75em;">Click the buttons to see people who share similar profession with H.Mitchell:</p>
+      <div style="margin:10px;"><p style="font-size: 0.75em;">Click the tags below to explore national, professional, and familial connections with H.Mitchell:</p>
       <button class="btn" id="showRelation_hmitchell_fromus" data-showing="false">From United States</button>
       <button class="btn" id="showRelation_hmitchell_Business" data-showing="false">Business</button>
       <button class="btn" id="showRelation_hmitchell_Writing" data-showing="false">Writing</button>
       <button class="btn" id="showRelation_hmitchell_FamilyMichell" data-showing="false">Family tie to visitor Anne Wood Mitchell</button>
       </div>
     </div>
-    <div class="signature_box" id="signature_mckean">
+    </div>
+    <div class="signature_box signature_right" id="signature_mckean">
+      <img src="arrow.png" alt="an arrow pointing to the signature" style="position:absolute; left:-7.9%; top:85%; width:8%;  transform: scaleX(-1);">
+      <div class="vertical-center">
       <h3>Margarett Sargent McKean</h3>
       <div style='margin:10px;font-size: 0.9em;'>United States, 1892-1978</div>
-      <img src="arrow.png" alt="an arrow pointing to the signature" style="position:absolute; left:-7.9%; top:85%; width:8%;  transform: scaleX(-1);">
+      <div style='margin:10px;font-size: 0.9em;'>Signed January 16, 1955</div>
+
       <img src="portraits/mckean.jpg" alt="Photographic portrait of Margarett Sargent McKean in 1915. Her dark hair is pulled back and she looks to the camera.">
       <div class="signature_info">
-        Artist Margarett Sargent McKean returns to Florence accompanied by her son Henry Pratt McKean II. The cousin of portrait painter John Singer Sargent, she studied sculpture in Italy before becoming a painter herself. There are whispers that she's engaged in extramarital affairs with both men and women, how scandalous!
-</div>
-      <div style="margin:10px;"><p style="font-size: 0.75em;">Click the buttons to see people who share similar profession with McKean:</p>
+      Artist <a href="https://en.wikipedia.org/wiki/Margarett_Sargent" target="_blank">Margarett Sargent McKean</a> returns to Florence accompanied by her son <a href="https://www.nytimes.com/1999/07/11/classified/paid-notice-deaths-mckean-quincy-adams-shaw-jr.html" target="_blank">Henry Pratt McKean II</a>.
+      As the cousin of famous portrait painter John Singer Sargent, she studied sculpture in Italy before becoming a painter herself.
+      There are whispers that she's engaged in extramarital affairs with both men and women, how scandalous!</div>
+      <div style="margin:10px;"><p style="font-size: 0.75em;">Click the tags below to explore national, professional, and familial connections with McKean:</p>
       <button class="btn" id="showRelation_mckean_fromus" data-showing="false">From United States</button>
       <button class="btn" id="showRelation_mckean_Art" data-showing="false">Art</button>
       <button class="btn" id="showRelation_mckean_MotherHenry" data-showing="false">mother to Henry Pratt McKean II</button>
       </div>
+    </div>
     </div>
 
 
@@ -734,18 +1111,40 @@ button:focus {
   let zooming=false;
   let svgsignature=document.querySelector('#book_signatures')
   let svgtags=document.querySelector('#tags')
+  let altbtn=document.querySelector(".altbtn");
+  let imagalt_showing = false;
+  let imagealt_hepburn=document.querySelector("#imagealt_hepburn")
+  let altclosebtn=document.querySelector("#altclose")
+  altclosebtn.onclick=function(e){
+    imagealt_hepburn.classList.add('hidden');
+    imagalt_showing=false
+  }
+  altbtn.onclick=function(e){
+
+    if(imagalt_showing==false){
+      imagealt_hepburn.classList.remove('hidden');
+      imagalt_showing=true
+    }else{
+      imagealt_hepburn.classList.add('hidden');
+      imagalt_showing=false
+    }
+  }
+
 
   zoombtn.onclick=function(e){
     if(zooming==false){
       zooming=true
+      hideAllSignaturePanels();
       console.log("zoom!")
       svgtags.classList.add('hidden')
       svgsignature.classList.add('hidden')
+      zoombtn.innerText="Zoom out"
     }else{
       zooming=false
       console.log("stop zoom!")
       svgtags.classList.remove('hidden')
       svgsignature.classList.remove('hidden')
+      zoombtn.innerText="Zoom in"
     }
 
   }
@@ -854,6 +1253,7 @@ button:focus {
                 allSignatureLinks[i+1].focus();
               }
               else {
+
                 allSignatureLinks[0].focus();
               }
             }
@@ -957,7 +1357,7 @@ button:focus {
         hideAllRelationshipPanels();
         //console.log(showRelationButton[i].id)
         let type_of_relation = showRelationButton[i].id.split("_").pop()
-        //console.log(type_of_relation)
+        console.log(type_of_relation)
         //show new relationships
         if (!showingRelationshipList.includes(type_of_relation)) {
           showingRelationshipList.push(type_of_relation);
@@ -1057,9 +1457,15 @@ button:focus {
 
   <div id="container_bottom">
   <div id="intro_text">
-  <p>The guests' identities may be analyzed in terms of different criteria (social and professional position, nationality etc.). From the first glance, the very cosmopolitan milieu of Florence during the period is apparent. Guests of the Actons included prominent figures in the world of architecture (e.g. Darcy Braddell and Dorothy (Busse) Braddell from Scotland); art history (Thomas Whittemore, founder of the Byzantine Institute of America); art collecting (Charles Loeser; Martin and Caroline Ryerson from Chicago; James Kerr Branch and Beulah (Gould) Branch who also owned a Villa in Fiesole); costume and set designers Umberto Brunelleschi and Gino Carlo Sensani. It is worth noticing that guests connected with literary endeavors were mostly contemporaries of the Actons' younger generation. In fact by having attended Eton and Oxford both Harold and William had befriended a literary coterie that included Harold's friends among the "Bright Young Things"-Brian Howard, Robert Byron and Evelyn Waugh-who would frequently visit Villa La Pietra, leaving behind their own inscribed books. Other 'literati' include Norman Douglas, Edith Sitwell, Somerset Maugham, Violet Trefusis, Reginald Turner, "rebel Boston Brahmin" John Brooks Wheelwright.
-</p><p>
-The elite of American and European capitalism frequently attended events at Villa La Pietra, where they compared notes about art collecting, home decoration and garden planning: Arthur and Hortense Acton were themselves involved in similar endeavors. A few names may help in recalling such visitors: Ada Small Moore, wife of W.H.Moore (US Steel); banker Jules Semon Bache; the Du Puys; Belgian industrialist and art collector Adolphe Stoclet - who had his celebrated Brussels home designed by Josef Hoffman and decorated by Gustav Klimt. Royalty are also among the Actons' guests (mainly from countries that had recently witnessed regime changes: such as Prussia, Serbia etc.). Socialites of different profiles were often among the guests at Villa La Pietra as well as the emerging 'stars' of the show business (Lina Cavalieri, Mistinguett).
+    <h3>Hosting at Villa La Pietra</h3>
+  <p>Villa La Pietra in Florence, Italy was home to the Acton family from 1903 to 1994. British architect and art dealer Arthur Acton and his American heiress wife Hortense moved to Italy and raised their sons Harold and William Acton amongst a rich collection of fine art and antiquities. Throughout their life at the Villa, the Actons hosted friends, family, and other guests with shared interests, documenting these visits with a signed guestbook.
+</p>
+<h3>The Acton Guestbook</h3>
+<p>The guestbook at Villa La Pietra is a large-format, brown, leather-bound book with carved engravings decorating its cover. Its nearly 300 yellowing pages of parchment contain signed entries spanning two generations, beginning in 1923 with the last entry made in 1998. When arriving at the villa, visitors still sign a guestbook with names, dates, and often locations from which they traveled.
+</p>
+<p>In order to reflect the social nature of the guestbook, we approach the lives of the signees in the style of society pages or a "Page Six" gossip column. The Actons would often use the guestbook to "network" or "show off" those who visited in the past to validate their well-established position in society. Using this lens to focus on the guests' life-stories prior to their arrival at Villa La Pietra allows us to take a closer look at why they may have visited - as well as draw connections between visitors from an outsider's perspective. It also allowed us to write short and fun captions for guests with extensive biographies.
+</p>
+<p>Many historic houses around the world have similar guestbooks, so this project aimed to create a prototype that can make a rational exploration of historical signatures more accessible. Our ambition is to use this as a proof-of-concept so that other historic houses might also attempt similar ways to make their own guestbooks more accessible.
 </p>
 </div>
 

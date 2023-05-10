@@ -1,0 +1,114 @@
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <style>
+
+    body{
+      background-color:#221D1D;
+      margin: 0; height: 100%; overflow: hidden
+    }
+    #background_book {
+      position: relative;
+      width: 100%;
+      margin: auto;
+      z-index:1;
+
+    }
+    h1{
+      color:white;
+    }
+    p{
+      color:white
+    }
+    #text_container{
+      position:absolute;
+      z-index:3;
+      left:10%;
+      top:62%;
+      width:40%;
+    }
+    #too_small_container {
+      width: 100%;
+      height: 100vh;
+      background-color: #000;
+      color: #fff;
+      z-index: 10;
+      font-size: 200%;
+      text-align: center;
+      display: none;
+      top: 0px;
+      left: 0px;
+      position: fixed;
+      margin:auto;
+
+    }
+    #more{
+      color:white;
+      position:absolute;
+      text-align:center;
+      top:92%;
+      left:50%;
+      margin:auto;
+      z-index:5;
+    }
+
+    a{
+      color:white;
+      text-decoration:none;
+    }
+    a:visited {
+
+      background-color: transparent;
+      color:white;
+    }
+    a:active {
+
+      background-color: transparent;
+      color:white;
+    }
+    @media screen and (max-width: 1023px) {
+        .signature_box {
+          font-size: 50%;
+          background-color: pink;
+        }
+        #too_small_container {
+          display: block;
+        }
+    }
+
+  </style>
+
+  <title>VLP GUESTBOOK</title>
+</head>
+<body>
+
+  <div id="too_small_container">
+    <div style="top:50%; position:absolute;">Please increase your screen size to fullscreen or rotate your device for better experience</div></div>
+  <a href="index2.html">
+    <div id="more" tabindex="1">
+    MORE
+    <div><img src="vector.png"></div>
+  </div>
+  </a>
+<img id="background_book" src="background1.png">
+<div id="text_container">
+<h1>Hosting at Villa La Pietra</h1>
+<p>Villa La Pietra in Florence, Italy was home to the Acton family from 1903 to 1994. British architect and art dealer Arthur Acton and his American heiress wife Hortense moved to Italy and raised their sons Harold and William Acton amongst a rich collection of fine art and antiquities. Throughout their life at the Villa, the Actons hosted friends, family, and other guests with shared interests, documenting these visits with a signed guestbook. </p>
+</div>
+
+<script>
+  more = myPanel.querySelector('more');
+  more.addEventListener('keydown', function(e) {
+
+    if (e.shiftKey && (e.code === 'Tab' || e.keyCode === 9)) {
+      e.preventDefault();
+
+      // transition focus back to the PREVIOUS button
+      more.focus();
+    }
+
+  });
+  </script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <style>
+
+    body{
+      background-color:#221D1D;
+      margin: 0; height: 100%; overflow: hidden
+    }
+    #background_book {
+      position: relative;
+      width: 100%;
+      margin: auto;
+      z-index:1;
+
+    }
+    h1{
+      color:white;
+    }
+    p{
+      color:white
+    }
+    #text_container{
+      position:absolute;
+      z-index:3;
+      left:45%;
+      top:22%;
+      width:40%;
+    }
+    #too_small_container {
+      width: 100%;
+      height: 100vh;
+      background-color: #000;
+      color: #fff;
+      z-index: 10;
+      font-size: 200%;
+      text-align: center;
+      display: none;
+      top: 0px;
+      left: 0px;
+      position: fixed;
+    }
+    #more{
+      color:white;
+      position:absolute;
+      text-align:center;
+      top:92%;
+      left:43.5%;
+      margin:auto;
+      z-index:5;
+    }
+
+    #back{
+      color:white;
+      position:absolute;
+      text-align:center;
+      top:5%;
+      left:45%;
+      margin:auto;
+      z-index:5;
+    }
+    a{
+      color:white;
+      text-decoration:none;
+    }
+    a:visited {
+
+      background-color: transparent;
+      color:white;
+    }
+    a:active {
+
+      background-color: transparent;
+      color:white;
+    }
+    @media screen and (max-width: 1023px) {
+        .signature_box {
+          font-size: 50%;
+          background-color: pink;
+        }
+        #too_small_container {
+          display: block;
+        }
+    }
+
+  </style>
+
+  <title>VLP GUESTBOOK</title>
+</head>
+<body>
+
+  <div id="too_small_container">
+    <div style="top:50%; position:absolute;">Please increase your screen size to fullscreen or rotate your device for better experience</div></div>
+  <a href="bookpage.html">
+    <div id="more" tabindex="1">
+    Visit the Guests
+    <div><img src="vector.png"></div>
+  </div>
+  </a>
+
+  <a href="index.html">
+    <div id="back" tabindex="2">
+        <div><img src="vector2.png"></div>
+    BACK
+
+  </div>
+  </a>
+<img id="background_book" src="background2.png">
+<div id="text_container">
+<h1>The Acton Guestbook</h1>
+<p>The guestbook at Villa La Pietra is a large-format, brown, leather-bound book with carved engravings decorating its cover. Its nearly 300 yellowing pages of parchment contain signed entries spanning two generations, beginning in 1923 with the last entry made in 1998. When arriving at the villa, visitors still sign a guestbook with names, dates, and often locations from which they traveled.
+</p>
+<p>In order to reflect the social nature of the guestbook, we approach the lives of the signees in the style of society pages or a "Page Six" gossip column. The Actons would often use the guestbook to "network" or "show off" those who visited in the past to validate their well-established position in society. Using this lens to focus on the guests' life-stories prior to their arrival at Villa La Pietra allows us to take a closer look at why they may have visited – as well as draw connections between visitors from an outsider's perspective. It also allowed us to write short and fun captions for guests with extensive biographies.
+</p>
+<p>
+  Many historic houses around the world have similar guestbooks, so this project aimed to create a prototype that can make a rational exploration of historical signatures more accessible. Our ambition is to use this as a proof-of-concept so that other historic houses might also attempt similar ways to make their own guestbooks more accessible.
+</p>
+</div>
+
+<script>
+  more = myPanel.querySelector('more');
+  const as = myPanel.querySelectorAll('a');
+  for (let j = 0; j < as.length; j++) {
+  more.addEventListener('keydown', function(e) {
+
+    if (e.shiftKey && (e.code === 'Tab' || e.keyCode === 9)) {
+      e.preventDefault();
+
+      // transition focus back to the PREVIOUS button
+      as[j-1].focus();
+    }
+
+  });
+  </script>
+</body>
+</html>

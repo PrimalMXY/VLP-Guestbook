@@ -67,6 +67,7 @@ $(function ($) {
       "border-radius"     : $options.round ? "50%" : "none",
       "box-shadow"        : $options.shadow,
       "background-repeat" : "no-repeat",
+
     });
 
     // Add custom CSS classes
@@ -101,7 +102,8 @@ $(function ($) {
         top                   : lensY,
         "background-image"    : "url(" + encodeURI($IMAGE_URL) + ")",
         "background-size"     : backgroundSize,
-        "background-position" : backPos
+        "background-position" : backPos,
+
       });
     })
 
